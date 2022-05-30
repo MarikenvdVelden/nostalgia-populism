@@ -14,7 +14,7 @@ The following data files might be of interest:
 See the scripts in `src/data-processing` for details on how these files were constructed  for the [first and second pilot study](src/data-processing/prepare-data-pilot.md).
 
 # Results
-* [Study 1](src/analysis/analysis_pilot.md) Demonstrates the analyses to test and visualise hypotheses based on pilot studies.
+* [Pilot Study](src/analysis/analysis_pilot.md) Demonstrates the analyses to test and visualise hypotheses based on pilot studies.
 
 # Code of Conduct
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
