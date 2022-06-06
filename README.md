@@ -1,5 +1,6 @@
-# Once Upon a Time:  Does Nostalgic Framing increase Populist Attitudes?
-Online research compendium of the paper entitled _Once Upon a Time:  Does Nostalgic Framing increase Populist Attitudes?_ . 
+# Once Upon a Time:  The effect of nostalgic rhetoric on Populist Radical Right support
+
+Online research compendium of the paper entitled _Once Upon a Time:  The effect of nostalgic rhetoric on Populist Radical Right support_ . 
 This repository combines the registered report, including pilot data, with the data &amp; analysis compendium.
 
 ## Registered Report
