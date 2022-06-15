@@ -77,6 +77,8 @@ d1 <- d1 %>%
 
 
 d2 <- d2 %>% 
+  mutate(date = as.character(map(strsplit(as.character(StartDate), split = " "), 1)),
+         nostalgic_message = ifelse(date>"2022-06-08", "no", nostalgic_message)) %>% 
   filter(QID1 == 1 & DistributionChannel == "anonymous") %>% 
   select(gender = Gender, age = Age, education = Education,
          job = Work, vote = `Political Q's`, vote_other = `Political Q's _18_TEXT`,

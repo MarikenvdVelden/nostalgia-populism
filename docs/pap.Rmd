@@ -1,0 +1,509 @@
+---
+output: 
+  stevetemplates::article:
+    fig_caption: true
+bibliography: references.bib
+urlcolor: black
+linkcolor: black
+header-includes:
+   - \usepackage{floatrow}
+   - \floatsetup[figure]{capposition=top}
+   - \floatsetup[table]{capposition=top}
+   - \usepackage{booktabs}
+   - \usepackage{longtable}
+   - \usepackage{array}
+   - \usepackage{multirow}
+   - \usepackage{wrapfig}
+   - \usepackage{float}
+   - \usepackage{colortbl}
+   - \usepackage{pdflscape}
+   - \usepackage{tabu}
+   - \usepackage[para,online,flushleft]{threeparttable}
+   - \usepackage{threeparttablex}
+   - \usepackage[normalem]{ulem}
+   - \usepackage{makecell}
+   - \usepackage{xcolor}
+   - \usepackage{hyperref}
+   - \usepackage{array}   
+   - \usepackage{caption}
+   - \usepackage{graphicx}
+   - \usepackage{epstopdf}
+   - \usepackage{siunitx}
+   - \usepackage{multirow}
+   - \usepackage{hhline}
+   - \usepackage{calc}
+   - \usepackage{tabularx}
+   - \usepackage{fontawesome}
+   - \usepackage{amsthm}
+   - \newtheorem{hypo}{Hypothesis}
+biblio-style: apsr
+title: "Once Upon a Time..."
+subtitle: "The Effect of Nostalgic Rhetoric on Populist Radical Right support"
+thanks: "Replication files are available on the author's Github account (https://github.com/MarikenvdVelden/nostalgia-populism). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: Puck C. Guldemond "
+author:
+- name: Puck C. Guldemond
+  affiliation: Vrije Universiteit Amsterdam
+- name: Mariken A.C.G. van der Velden
+  affiliation: Radboud University Nijmegen
+anonymous: FALSE
+abstract: "_Populist parties have gained electoral support over the last decades. Recent studies explained the uprising of populist radical right (PRR) parties by examining the psychological roots of their supporters. These studies show that individuals who score low on the personality trait agreeableness, are more likely to support PRR parties: The anti-establishment messages that populists disseminate is attractive for people with low agreeableness. Personality traits are assumed to be relatively stable over time, while the electoral successes of PRR parties are highly volatile. This presents an interesting puzzle: “How can something that barely changes explain something that changes all the time?”. To explain volatility of PRR support, personality is likely triggered by an exogenous variable and this activation amplifies PRR support. Nostalgia is an important psychological factor shaping populist attitudes. Populist actors use nostalgic rhetoric that invoke representations of a glorious national past in order to sharpen group boundaries between the “authentic us” (i.e. the homogeneous people) and the “alien them” (i.e. the corrupt elite). We, therefore, expect nostalgic messages to activate the personality dimension agreeableness, and subsequently, effect PRR support. To test these expectations, we conduct a survey-experiment measuring the effect of nostalgic rhetoric for the issues of corruption and immigration, as these issues are typically owned by populist parties. The treatment is a fictitious Twitter post about the two issues in which nostalgic rhetoric is manipulated. This leads to a 2x2 experiment (i.e. nostalgic rhetoric (present/absent) x issue), where participants are randomly assigned to one of the four conditions. Hence, we examine whether agreeableness can be triggered by an exogenous variable, such as nostalgic rhetoric, or whether the threat solely comes from the issue, regardless of the rhetoric. This answer allows us to explain the variation in support for PRR._"
+keywords: "Experiment, Populist Attitudes, Nostalgia, Personality, Political Rhetoric"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+geometry: margin=1in
+mainfont: cochineal
+fontsize: 11pt
+params:
+  anonymous: ""
+  doublespacing: ""
+doublespacing: TRUE
+endnote: no
+pandocparas: TRUE
+sansitup: FALSE
+---
+```{r setup, include=FALSE}
+## include this at top of your RMarkdown file for pretty output
+## make sure to have the printr package installed: install.packages('printr')
+knitr::opts_chunk$set(message = FALSE, warning = FALSE, echo = FALSE,cache = FALSE)
+#library(printr)
+library(tidyverse)
+library(kableExtra)
+options(kableExtra.latex.load_packages = FALSE)
+here::i_am("docs/pap.Rmd")
+```
+
+\newpage
+
+# Expectations
+
+Populist parties have gained electoral support over the last decades. 
+Populism is defined as an ideology that considers society to be separated into two homogeneous groups: 'the pure people' versus 'the corrupt elite'. 
+According to the populist ideology, politics should be an expression of the general will of the people (Mudde, 2004). 
+Recent studies (Bakker et al., 2016; 2021) explained the uprising of populist radical right (PRR) parties by examining the psychological roots of their supporters. T
+hese studies show that individuals who score low on the personality trait agreeableness, are more likely to support PRR parties: The anti-establishment messages that populists disseminate is attractive for people with low agreeableness. However, personality traits are assumed to be relatively stable over time, while the electoral successes of PRR parties are highly volatile. 
+
+To explain volatility of PRR support, personality is likely triggered by an exogenous variable and this activation amplifies PRR support. 
+Elçi (2021) theorizes and demonstrates that nostalgia is an important psychological factor shaping populist attitudes. 
+Group-based nostalgia triggers positive in-group orientation based on shared past experiences, and causes negative out-group orientation (Smeekes, 2015). 
+Populist actors use nostalgic rhetoric that invoke representations of a glorious national past in order to sharpen group boundaries between the 'authentic us' (i.e. the homogeneous people) and the 'alien them' (i.e. the corrupt elite) (Elçi, 2021; Smeekes, 2015). 
+A well-known example is the 'Make America Great Again' slogan of Donald Trump. 
+<!--We expect nostalgic messages to activate the personality dimension agreeableness, and subsequently, affect PRR support. -->
+In line with Elçi’s expectations we hypothesize that:
+
+>**H1**: _The more nostalgic respondents are, the more populist attitudes they will express._
+
+Crisis and political discontent form a breeding ground for populist support. 
+When confronted with extreme crises, populists blame the elite for the so-called decline in the economic, political, and living standards of the people (Akkerman et al., 2014; Kriesi, 2018; Rooduijn et al., 2017). 
+However, not everyone seems to suffer from these crises in the same way. According to Kriesi (2018), a new cleavage has emerged, distinguishing between the 'losers' and 'winner' of globalization. These globalization 'losers' are successfully mobilized by populist parties who combine a host ideology of nationalism with the use of nostalgic rhetoric (Elçi, 2021; Kriesi, 2018). 
+The usage of nostalgic rhetoric triggers populist attitudes as it generates an intergroup cleavage of 'the pure people' versus 'the corrupt elite'. 
+When this 'us' versus 'them' duality taps into the moral distinction between the elites and the people, nostalgia increases populist attitudes (Elci, 2021). 
+According to Caprara and Zimbardo (2004) political messages resonate with people when the rhetoric that is used in these messages is congruent with their personality. W
+e therefore expect that when participants are exposed to nostalgic rhetoric, their populist attitudes will increase, leading to the following hypothesis: 
+
+>**H2**: _Exposure to nostalgic rhetoric leads to an increase of populist attitudes._
+
+Our third hypothesis draws on recent work demonstrating that people who score low on the personality trait _Agreeableness_ are likely to support populist parties (Bakker et al., 2016; 2021).
+Agreeableness is described as a personality trait that is defined by the concepts of trust towards others, soft-heartedness, altruism, tolerance, cooperativeness and modesty (Costa et al., 1991). 
+Bakker et al., (2016; 2021) hypothesize that people who score low on Agreeableness tend to be highly skeptical of others behavior.
+Populist parties often communicate anti-establishment messages that blame the political elite for societal crisis (Akkerman et al., 2014). 
+These messages resonate with people who score low on Agreeableness as anti-establishment messages match their distrusting, cynical personality towards the political elite. 
+Therefore, they are sensitive to populist parties' anti-establishment message leading them to support populist parties (Bakker et al., 2021). 
+Building upon this argument, we expect that the effect of exposure to nostalgic rhetoric on populist attitudes is stronger for those who score low on the personality trait Agreeableness. 
+This reasoning leads us to the following hypothesis:  
+
+>**H3**: _Exposure to nostalgic rhetoric leads to a larger increase of populist attitudes among those who are low on Agreeableness._
+
+
+# Research Desing and Protocol
+
+## Sample
+We  will conduct this survey experiment in the Netherlands in September 2022.
+The sample, recruited through [KiesKompas](https://www.kieskompas.nl/en/), will consist of X participants (based on the power analysis presented in Figure \ref{fig:power1}) of 18 years and older.
+Kieskompas works with non-random opt-in respondents.
+Therefore, I measure many demographic background variables (see [Section 3.2](#control-variables)).
+Balance checks will be conducted to demonstrate whether certain categories are over represented in a certain experimental group.
+The study has been approved by the [Research Ethics Review Committee](https://fsw.vu.nl/nl/onderzoek/research-ethics-review/index.aspx) of the _Vrije Universiteit Amsterdam_ (see the approval, number `2022-6-5-907` [here](https://github.com/MarikenvdVelden/nostalgia-populism/blob/master/docs/2022-6-5-907.pdf))).
+To ensure good quality of our data, two attention checks (discussed in more detail in [Section 3.3](#attention-checks)) are included.
+Each respondent failing the attention check will be excluded and replaced with another 'good' response.
+
+## Experimental Protocol
+The study is conducted online and in German
+Participants are told that they are taking part in a survey to get an overview of how German people form their views on politics.
+After reading an informed consent message participants are forwarded to the main questionnaire (or the survey will be terminated if they do not agree to the consent form).
+
+First, participants complete a set of demographic variables (i.e. income, employment, and degree of urbanization).
+This block ends with one of the two attention checks included in this survey.
+When participants fail this attention check, a warning appears asking them to read the question again
+carefully  and  to  answer  again.
+Thereafter, a set of background variables are asked on their stances on the political issues, their political interest and knowledge, as well as on their ideological position -- the full codebook can be viewed [here](#).
+Before entering the experimental condition, respondents get a second attention check.
+Only when they have answered it correctly, they enter the first round of the experiment -- if they fail to answer the question correctly, they are thrown out of the survey.
+After the experimental treatment, the heterogeneous treatment (agreeableness) and a post-treatment question (populist attitudes) are asked. 
+
+### Pilot to Test Treatment
+To frame nostalgic rhetoric, we have done a pilot with a Tweet where the message came from an anonymous (blurred) Twitter user versus coming from the Dutch populist party Forum for Democracy (FvD).
+Figure \ref{fig:results-treat} demonstrates that compared to the anonymous message, respondents seeing the Tweet from FvD are more likely to report statistically significant higher values of populist and anti-pluralist attitudes, but lower levels of elitist attitudes.
+
+
+```{r results-treat, out.width = "100%", fig.align = 'center', fig.cap = "\\label{fig:results-treat}Diffferences between Treatment for Effect on Populist Attitudes"}
+knitr::include_graphics(here::here("report/figures", "Diff-DV-Treat-1.png"))
+```
+
+Moreover, when respondents see the FvD Tweet, they are statistically significantly less likely to perceive the message being about corruption -- see the top row of Figure \ref{fig:results-treat2}. 
+We will therefore use a Tweet from an anonymous (blurred) source in the actual experiment.
+
+```{r results-treat2, out.width = "100%", fig.align = 'center', fig.cap = "\\label{fig:results-treat2}Diffferences between Treatment for Effect on Manipulation Checks"}
+knitr::include_graphics(here::here("report/figures", "Diff-DV-Treat-2.png"))
+```
+
+## Power Analysis
+As detailed in [Section 4](#analysis), we conduct an OLS regression for the four conditions (`issue * rhetoric`).
+  
+To calculate power for the hypotheses, the R package `DeclareDesign` is used [@blair2019declaring].
+In our pilot (see [here](https://github.com/MarikenvdVelden/nostalgia-populism/blob/main/src/data-processing/pilot_checks.md)), the effect size are approximately $b = 0.1$, i.e. a small effect visualized by the purple and blue lines in Figure \ref{fig:power1}.
+The hypothesis are directional, Figure \ref{fig:power1} therefore displays one-tailed tests with $\alpha = 0.05$.
+The power analysis shows that testing the hypotheses requires a sample size of $6,000$ participants in total, (x-axis) to reach very high levels of power, i.e. $>90\%$, (indicated by the vertical line in Figure \ref{fig:power}). 
+  
+```{r power, fig.align = 'center', out.width = "100%", fig.cap = "\\label{fig:power1}Power Analysis", fig.topcaption=TRUE, eval = T}
+knitr::include_graphics(here::here("report/figures", "power_analysis.png"))
+```
+  
+# Measures
+
+## Dependent Variables
+We rely on the three items in the populism scale that mention the people: a) "The people, not politicians, should make the most important political decisions"; b) "The politicians in the German Bundestag need to follow the will of the people"; and c) "The political differences between elites and the people are greater than the differences among citizens". All items are measured on a 5-point Likert-scale: `very much disagree`, `disagree`, `neutral`, `agree`, `very much agree`.
+
+## Hetereogeneous Treatments
+
+_Nostaligic Attitudes_ Using the measures as specified in Elci (2021).
+
+_Agreeableness_ Using the same measures as Bakker et al. (2020).
+
+## Control Variables
+
+As control variables, the following _demographics_ are measured post-treatment: gender, age, education, geographical region, level of urbanness, employment, and income.
+For the analysis, only variables that are unbalanced over the experimental conditions will be included.
+Table \ref{tab:demographics} gives an overview of the questions asked in the survey as well as their English translations.
+
+- _Gender_ is measured as `sex`. The answer categories are `Male` (value of `1`), `Female` (value of `0`), and `No answer` (value of `999`).
+
+- _Age_ is measured using 6 categories: `17 or younger`, `18--29`, `30--39`, `40--49`, `50--59`, `60--74`. 
+
+- _Education_ is measured as the highest successfully completed level of education, recoded into four categories: `low`, `middle`, `high`, and `none`.
+We create dummy variables for each level of education with the lowest category as base category.
+
+- _Employment_ Respondents were asked which category of employment -- `Full-time employed`, `Part-time employed`, `Entrepreneur`, `Unemployed and searching for a job`, `Unemployed and not searching for a job or incapacitated`, `Housewife/Househusband or else`, `Retired`, `Student or full-time education` -- applied most to them. 
+
+- _Income_ Respondents were questioned on their monthly income in bins of €500 -- `€500 or less`, `€501-€1000`, `€1001-€1500`, `€1501-€2000`, `€2001-€2500`, `€2501-€3000`, `€3001-€3500`, `€3501-€4000`, `€4501-€7500`, `€7501 or more` -- as well as giving them the options of `won't  say` and `don't know`.
+
+- _Geographical region_ is measured using the _Nielsen districs_, dividing the Netherlands into 1) the 3 major cities plus suburbs, Amsterdam (plus Diemen, Ouder-Amstel, Landsmeer, Amstelveen), Rotterdam (plus Schiedam, Capelle aan den IJssel, Krimpen aan den IJssel, Nederlek, Ridderkerk, Barendrecht, Albrandswaard) and The Hague (plus Leidschendam, Voorburg, Rijswijk, Wassenaar, Wateringen); 2) West (Noord-Holland, Zuid-Holland and Utrecht (excluding the major cities and their suburbs; 3) North (Groningen, Friesland and Drenthe), 4) East (Overijssel, Gelderland and Flevoland); and South (Zeeland, Noord-Brabant and Limburg).
+
+
+```{r demographics, topcaption=TRUE}
+d <- tibble(Variable = c("gender (D1)", "age (D2)", 
+                         "region (D3)", "job (D5)", "income (D6)",
+                         "education (D7)"), 
+            `Wording ENG` = c("What is your gender?", 
+                              "What is your year of birth?",
+                             "In which region do you live?",
+                             "What applies most to you? Are you...",
+                              "Can you indicate which income groups your net monthly household income falls into?",
+                             "What is your highest level of education?"),
+            `Wording NL` = c("Wat is uw geslacht?", "Wat is uw geboortejaar?", 
+                             "In welke regio woont u?",
+                             "Wat is het meest op u van toepassing? Bent u...",
+                             "Kunt u aangeven in welke inkomensgroepen uw netto maandelijks huishoudinkomen valt?", 
+                             "Wat is uw hoogst GENOTEN opleiding"))
+
+kbl(d, booktabs =T, caption = "\\label{tab:demographics}Survey Questions - Demographics") %>%
+  kable_styling(latex_options = c("striped", "hold_position"),
+                full_width = F, fixed_thead = T, position = "center") %>%
+  column_spec(1, width = "3cm") %>%
+  column_spec(2, width = "7cm") %>%
+  column_spec(3, width = "7cm")
+```
+
+In addition, pre-treatment, respondents' ideological position, political knowledge, vote recall, and position on the issues migration, climate, tax, and EU are measured (see Table \ref{tab:pret}).
+Those variables will only be included in the analyses if balance checks indicate they are necessary.
+Moreover, the variables will be used to explore heterogeneous relationships. 
+
+- _Ideological position_ is measured using an 11-point scale ranging from left (`0`) to right (`10`).
+
+- _Vote Recall_ Respondents were asked which party they voted for in the 2021 parliamentary elections. The options were 1) all parties that were elected into parliament -- `Bij1`, `BoerBurgerBeweging`, `CDA`, `ChristenUnie`, `D66`, `Denk`, `Forum for Democracy`, `JA21`, `GroenLinks`, `PvdA`, `Animal Rights Party`, `PVV`, `SGP`, `SP`, `VOLT`,`VVD`, `50Plus Party` -- 2) another party; 3) blanco vote; and 4) a `Don't know` option.
+
+
+```{r pret, topcaption=TRUE}
+d <- tibble(Variable = c("vote recall (PT1)", "introduction",
+                         "migration (PT2)", "climate (PT3)",
+                         "tax (PT4)", "EU (PT5)", "RILE (PT6)",
+                         "political-knowledge1 (PT7_1)", 
+                         "political-knowledge2 (PT7_2)", 
+                         "political-knowledge3 (PT7_3)", 
+                         "political-knowledge4 (PT7_4)", 
+                         "political-knowledge5 (PT7_5)",
+                         "political-knowledge5 (PT7_6)"), 
+            `Wording ENG` = c( "Which party did you vote for during the last parliamentary elections of March 2021?",
+                               "To what extent do you agree with the following statements:",
+                               "There are too many immigrants in the Netherlands.",
+                               "The climate crisis is exaggerated.",
+                               "The tax rate for the highest earners should go up",
+                               "The Netherlands should have a different role in the European Union.",
+                               "In politics there is often talk about left and right. Where would you put yourself on this scale?",
+                               "Which parties currently form the coalition government?",
+                               "Which of the following is the current Finance Minister in the Rutte cabinet?",
+                               "Which political party was the second-largest party in the last Lower House elections on March 17?",
+                               "By whom are members of the Senate elected?",
+                               "Who makes or is making new laws in the Netherlands?",
+                               "If the government and the House of Representatives pass a law that is not in line with the Dutch Constitution, may the courts disapprove it?"),
+            `Wording NL` = c("Op welke politieke partij heeft u bij de vorige Tweede Kamerverkiezingen van maart 2021 gestemd?",
+                             "In hoeverre bent u het eens met onderstaande stellingen:",
+                             "Er zijn te veel immigranten in Nederland.",
+                             "De klimaatcrisis wordt overdreven.",
+                             "Het belastingtarief voor de hoogste inkomens moet omhoog",
+                             "Het lidmaatschap van de Europese Unie is tot nu toe vooral slecht geweest voor Nederland",
+                             "In de politiek wordt vaak gesproken over links en rechts. Waar zou u uzelf op deze schaal plaatsen?",
+                             "Welke partijen vormen op dit moment de coalitieregering?",
+                            "Wie van de volgende personen is de huidige minister van Financiën in het kabinet Rutte?",
+                            "Welke politieke partij was de op één na grootste partij tijdens de afgelopen Tweede Kamerverkiezingen van 17 maart?",
+                            "Door wie worden de leden van de Eerste Kamer gekozen?",
+                            "Wie maakt of maken in Nederland nieuwe wetten?",
+                            "Als de regering en de Tweede Kamer een wet aannemen die niet overeenkomt met de Nederlandse Grondwet, mag de rechter deze wet dan afkeuren?"))
+
+kbl(d, booktabs =T, caption = "\\label{tab:pret}Survey Questions - PreTreatment Questions") %>%
+  kable_styling(latex_options = c("striped", "hold_position"),
+                full_width = F, fixed_thead = T, position = "center") %>%
+  column_spec(1, width = "3cm") %>%
+  column_spec(2, width = "7cm") %>%
+  column_spec(3, width = "7cm")
+```
+
+- _Political knowledge_ is measured with six items from the DPES.
+
+
+## Attention Checks
+I include two attention checks in the survey.
+The first one is after the pre-treatment covariates, the second one is asked just before respondents enter the third round of the experimental treatments.
+The attention checks are taken from @berinsky2014separating and adapted to the Dutch context (see also PAPER IR).
+If a respondents fails the first attention check, a warning appears and the respondent can only continue with the survey once the respondent has correctly answered the question correctly.
+The second attention check also has a warning -- meaning that respondents have to select two options -- but if they fail to correctly pass the check, they are excluded.
+Each excluded respondent due to failing an attention check is replaced with another ``good respondent".
+
+**Attention Check 1**  When a big news story breaks people often go online to get up-to-the-minute details on what is going on.
+We want to know which websites people trust to get this information.
+We also want to know if people are paying attention to the question.
+To show that you have read this much, please ignore the question and select Volkskrant and Metro as your two answers.
+When there is a big news story, which is the one news website you would visit first? (Please
+only choose one).
+Eight (Dutch) news outlets are provided to choose from.
+Respondents pass the attention check if they select _de Volkskrant_ and _Metro_.
+
+**Attention Check 2**:
+We would like to get a sense of your general preferences.
+Most  modern  theories  of  decision  making  recognize  that  decisions  do  not take  place  in  a  vacuum.
+Individual  preferences  and  knowledge,  along  with  situational variables can greatly impact the decision process.
+To demonstrate that you've read this much,  just  go  ahead  and  select  both  red  and  green  among  the  alternatives  below,  no matter what your favourite color is.  Yes, ignore the question below and select both of
+those options.
+What is your favourite color?
+Six colors are provided to choose from, respondents pass the attention check if they select red and green.
+
+## Exclusion Criteria
+Participants are required to respond to each question.
+
+# Analysis
+We test the hypotheses formulated in [Section 1](#expectations) by fitting linear multivariate regressions.
+In each model, we will estimate the coefficient for whether the rhetoric was nostalgic or not. 
+We will add nostalgic attitudes as well as agreeableness as interactions with the experimental conditions.
+We will only add control variables in the analyses that are unbalanced, as explained in [Section 4.1](#balance-checks).
+
+## Balance Checks
+We will conduct a balance test based on demographics (age, gender, education, geographical region, level of urbanness,employment, and income), vote choice in the 2021 parliamentary elections, ideological self-placement, political knowledge, and positions on the issues, using the `cobalt` R package [@greifer2021]. 
+If the groups are unbalanced on one of these variables -- i.e. standardized mean differences $<0.05$ -- we will add the covariates to the analyses.
+We will use the code below to conduct the balance tests (see [here](https://github.com/MarikenvdVelden/bias-experiment/blob/master/src/analysis/balance-test.R) for the R script).
+
+```{r balance, eval=FALSE, echo = TRUE}
+covs <- d %>%
+  mutate(treatment = sentence) %>%
+  select(sentence, D1:D7, PT1:PT&) 
+
+balanced <-bal.tab(treatment ~ factor(D1) + D2 +
+                     factor(D3) + D4 + D5 + 
+                     factor(D6) + D7 + PT1 + 
+                     PT2 + PT3 + PT4 + PT5 + 
+                     PT6 + PT7,
+                     data = covs,
+          thresholds = c(m = 0.05))[[1]] 
+```
+
+## Hypothesis 1
+We test the _nostalgic attitudes hypothesis_ using Equation \ref{eq:h1} and the code chunk below.
+The coefficient of $\beta_{1}$ denotes the level of nostalgic attitudes.
+If $\beta_{1}$ is positive and statistically significant, we have successfully replicated Elci's study.
+
+\begin{equation}\label{eq:h1}
+  \hat{Y} = \beta_{0} + \beta_{1}Nostalgia + 
+  \beta_{2}Rhetoric +  \beta_{3}Issue + 
+  \beta_{n}Controls + \varepsilon
+\end{equation}
+
+
+
+```{r h1, eval = FALSE, echo = TRUE}
+m8 <- tidy(lm(populist ~ collective_nostalgia + 
+                as.factor(nostalgia) + as.factor(nostalgic_message) +
+                as.factor(message) + as.factor(issue), data = d)) %>% 
+  mutate(y = "Populist Attitude")
+m9 <- tidy(lm(pluralist ~ collective_nostalgia + 
+                as.factor(nostalgia) + as.factor(nostalgic_message) +
+                as.factor(message) + as.factor(issue), data = d)) %>% 
+  mutate(y = "Pluralist Attitude")
+m10 <- tidy(lm(elitist ~ collective_nostalgia + 
+                 as.factor(nostalgia) + as.factor(nostalgic_message) +
+                as.factor(message) + as.factor(issue), data = d)) %>% 
+  mutate(y = "Elitist Attitude")
+
+m8 %>% add_row(m9) %>% add_row(m10) %>% 
+  filter(term == "collective_nostalgia") %>% 
+  mutate(term = recode(term,
+                       `collective_nostalgia` = "Nostalgic Attitude"),
+         lower = estimate - (1.56 * std.error),
+         upper = estimate + (1.56 * std.error)) %>% 
+  ggplot(aes(x = term, 
+             y = estimate,
+             ymin = lower,
+             ymax = upper,
+             color = y)) +
+  geom_point(position = position_dodge(.5)) + 
+  geom_errorbar(position = position_dodge(.5), width = 0) +
+  theme_ipsum() +
+  labs(x = "", y = "Predicting Populist Attitudes",
+       caption = "Controlled for Experimental Conditions",
+       subtitle = "Results H1") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5),
+        legend.position="bottom",
+        legend.title = element_blank()) +
+  scale_color_manual(values = fig_cols) +
+  geom_hline(yintercept = 0, size = .2, linetype = "dashed") +
+  coord_flip()
+```
+
+## Hypothesis 2
+We test the _nostalgic rhetoric hypothesis_ using Equation \ref{eq:h1} and the code chunk below.
+The coefficient of $\beta_{2}$ denotes the treatment effect of being exposed to nostalgic rhetoric.
+If $\beta_{2}$ is positive and statistically significant, we have successfully replicated Elci's study.
+
+
+```{r h2, eval = FALSE, echo = TRUE}
+m8 %>% add_row(m9) %>% add_row(m10) %>% 
+  filter(term == "as.factor(nostalgic_message)yes") %>% 
+  mutate(term = recode(term,
+                       `as.factor(nostalgic_message)yes` = "Treatment: Nostalgic Message"),
+         lower = estimate - (1.56 * std.error),
+         upper = estimate + (1.56 * std.error)) %>% 
+  ggplot(aes(x = term, 
+             y = estimate,
+             ymin = lower,
+             ymax = upper,
+             color = y)) +
+  geom_point(position = position_dodge(.5)) + 
+  geom_errorbar(position = position_dodge(.5), width = 0) +
+  theme_ipsum() +
+  labs(x = "", y = "Predicting Populist Attitudes",
+       subtitle = "Results H2",
+       caption = "Controlled for Experimental Conditions") +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5),
+        legend.position="bottom",
+        legend.title = element_blank()) +
+  scale_color_manual(values = fig_cols) +
+  geom_hline(yintercept = 0, size = .2, linetype = "dashed") +
+  coord_flip()
+
+m11 <- lm(populist ~ collective_nostalgia + 
+                as.factor(nostalgia) + 
+                as.factor(nostalgic_message) * agreeable +
+                as.factor(issue), data = df2) 
+m11 <- summary(margins(m11, variables = "nostalgic_message", 
+                      at = list(agreeable = 1:5))) %>% 
+  tibble() %>% 
+  mutate(lower = AME - (1.56 * SE),
+        upper = AME + (1.56 * SE),
+        y = "Populist Attitude")
+
+m12 <- lm(pluralist ~ collective_nostalgia + 
+                as.factor(nostalgia) + 
+                as.factor(nostalgic_message) * agreeable +
+                as.factor(issue), data = df2)
+m12 <- summary(margins(m12, variables = "nostalgic_message", 
+                      at = list(agreeable = 1:5))) %>% 
+  tibble() %>% 
+  mutate(lower = AME - (1.56 * SE),
+        upper = AME + (1.56 * SE),
+        y = "Pluralist Attitude")
+
+m13 <- lm(elitist ~ collective_nostalgia + 
+                 as.factor(nostalgia) + 
+                 as.factor(nostalgic_message) * agreeable +
+                as.factor(issue), data = df2)
+m13 <- summary(margins(m13, variables = "nostalgic_message", 
+                      at = list(agreeable = 1:5))) %>% 
+  tibble() %>% 
+  mutate(lower = AME - (1.56 * SE),
+        upper = AME + (1.56 * SE),
+        y = "Elitist Attitude")
+
+m11 %>% add_row(m12) %>% add_row(m13) %>%  
+  ggplot(aes(x = agreeable, 
+             y = AME,
+             ymin = lower,
+             ymax = upper,
+             color = y,
+             fill = y)) +
+  geom_line() + 
+  geom_ribbon(alpha = .2) +
+  theme_ipsum() +
+  labs(x = "Levels of Agreeableness \n 1 = Low, 5 = High", y = "Average Marginal Effects of Exposure to Nostalgic Rhetoric for Levels of Agreeableness",
+       subtitle = "Results H3",
+       caption = "Controlled for Experimental Conditions & Nostalgic Attitudes") +
+  facet_grid(.~y) +
+  theme(plot.title = element_text(hjust = 0.5),
+        plot.subtitle = element_text(hjust = 0.5),
+        legend.position="none",
+        legend.title = element_blank()) +
+  scale_color_manual(values = fig_cols) +
+  scale_fill_manual(values = fig_cols) +
+  geom_hline(yintercept = 0, size = .2, linetype = "dashed") 
+```
+
+## Hypothesis 3
+To test the _Agreeableness hypotheses_, using Equation \ref{eq:h2} and the code chunk below.
+The coefficient of $\beta_{2}$ denotes the treatment effect of being exposed to nostalgic rhetoric.
+The coefficient of $\beta_{4}$ denotes the level of agreeableness of the respondent.
+The coefficient of $\beta_{5}$ is the interaction of the  $\beta_{2}$ and  $\beta_{4}$.
+If the Average Marginal Effect of $\beta_{2}$ is negative and statistically significant when $\beta_{4} >$ (i.e. higher levels of agreeableness), the hypothesis will be confirmed.
+
+\begin{equation}\label{eq:h2}
+  \hat{Y} = \beta_{0} + \beta_{1}Nostalgia + 
+  \beta_{2}Rhetoric + \beta_{3}Issue +
+  \beta_{4}Agreeableness +
+  \beta_{5}Rhetoric*Agreeableness +
+  \beta_{n}Controls + \varepsilon
+\end{equation}
+
+
+
+```{r h3, eval = FALSE, echo = TRUE}
+h3a <- lmer(stance ~ masked + specification * ideological_distance_to_party +
+              political_knowledge + (1 | issue), data= d)
+
+h3b <- lmer(stance ~ masked + 
+              specification * ypolitical_knowledge + 
+              ideological_distance_to_party + (1 | issue), data= d)
+```
+
+
+## Statistical Significance
+All the hypotheses are directional, and therefore all of the tests will be one-tailed.
+We will use an $\alpha$-value of ``0.05` as the value for statistical significance in all models above.
+
+\newpage
+# References

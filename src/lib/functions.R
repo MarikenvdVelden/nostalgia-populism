@@ -8,6 +8,7 @@ library(survey)
 library(broom)
 library(margins)
 library(qualtRics)
+library(stringr)
 
 set.seed(26111985)
 

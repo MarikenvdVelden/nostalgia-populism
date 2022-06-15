@@ -41,7 +41,7 @@ d1 <- fetch_survey(surveyID = "SV_6nXTxSvj5FOOZsW",
                     label = FALSE, convert = FALSE) #anonymous message
 ```
 
-    ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+    ##   |                                                                              |                                                                      |   0%  |                                                                              |=================                                                     |  24%  |                                                                              |==================================                                    |  48%  |                                                                              |===================================================                   |  73%  |                                                                              |====================================================================  |  97%  |                                                                              |======================================================================| 100%
 
 ``` r
 d2 <- fetch_survey(surveyID = "SV_8H3HjWDoT94ymRE", 
@@ -49,7 +49,7 @@ d2 <- fetch_survey(surveyID = "SV_8H3HjWDoT94ymRE",
                     label = FALSE, convert = FALSE) #FvD message
 ```
 
-    ##   |                                                                              |                                                                      |   0%  |                                                                              |======================================================================| 100%
+    ##   |                                                                              |                                                                      |   0%  |                                                                              |======================                                                |  32%  |                                                                              |============================================                          |  63%  |                                                                              |==================================================================    |  95%  |                                                                              |======================================================================| 100%
 
 ``` r
 source(here("src/data-processing/pilot.R"))
@@ -84,7 +84,7 @@ variable
 <tbody>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.63
+0.59
 </td>
 <td style="text-align:left;width: 6cm; ">
 Political Vulnarability
@@ -92,7 +92,7 @@ Political Vulnarability
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.71
+0.74
 </td>
 <td style="text-align:left;width: 6cm; ">
 Cultural Vulnarability
@@ -100,7 +100,7 @@ Cultural Vulnarability
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.84
+0.80
 </td>
 <td style="text-align:left;width: 6cm; ">
 Relative Deprivation
@@ -108,7 +108,7 @@ Relative Deprivation
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.35
+0.25
 </td>
 <td style="text-align:left;width: 6cm; ">
 Need for Cognition
@@ -116,7 +116,7 @@ Need for Cognition
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.57
+0.61
 </td>
 <td style="text-align:left;width: 6cm; ">
 Nativism
@@ -132,7 +132,7 @@ Collective Narcisism
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.68
+0.67
 </td>
 <td style="text-align:left;width: 6cm; ">
 Collective Nostalgia
@@ -140,7 +140,7 @@ Collective Nostalgia
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.64
+0.65
 </td>
 <td style="text-align:left;width: 6cm; ">
 Populist Attitudes
@@ -148,7 +148,7 @@ Populist Attitudes
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.63
+0.55
 </td>
 <td style="text-align:left;width: 6cm; ">
 Pluralist Attitudes
@@ -164,7 +164,7 @@ Elitist Attitudes
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.40
+0.50
 </td>
 <td style="text-align:left;width: 6cm; ">
 Nationalism
@@ -172,7 +172,7 @@ Nationalism
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
--0.43
+-0.10
 </td>
 <td style="text-align:left;width: 6cm; ">
 Agreeableness
@@ -180,7 +180,7 @@ Agreeableness
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.84
+0.87
 </td>
 <td style="text-align:left;width: 6cm; ">
 Trust in Institutions
@@ -188,7 +188,7 @@ Trust in Institutions
 </tr>
 <tr>
 <td style="text-align:right;width: 6cm; ">
-0.63
+0.65
 </td>
 <td style="text-align:left;width: 6cm; ">
 Collectiive Nostalgia
