@@ -448,3 +448,9 @@ p2b <- open1 %>%
         legend.position="bottom",
         legend.title = element_blank()) +
   guides(fill=guide_legend(nrow=1,byrow=TRUE))
+
+tmp <- df |> 
+  dplyr::select(polevent:sports_event)
+ds1 <- d1 |> 
+  dplyr::select(id:urbanisation, A1:A2b, F1_1:F1_9, H1a:H1b_11) |> 
+  add_column(tmp)

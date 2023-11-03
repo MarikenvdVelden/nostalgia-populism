@@ -53,3 +53,5 @@ data/tmp
 data/raw-private
 
 .DS_Store
+
+docs/

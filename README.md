@@ -1,19 +1,20 @@
-# Once Upon a Time:  The effect of nostalgic rhetoric on Populist Radical Right support
+# Do We All Long for the Past? Investigating Nostalgia as a Persuasive Political Rhetorical Strategy
 
-Online research compendium of the paper entitled _Once Upon a Time:  The effect of nostalgic rhetoric on Populist Radical Right support_ . 
-This repository combines the registered report, including pilot data, with the data &amp; analysis compendium.
+Online research compendium of the paper entitled _Do We All Long for the Past? Investigating Nostalgia as a Persuasive Political Rhetorical Strategy_ . 
+This repository combines the preregistration plan and the paper with the data &amp; analysis compendium.
 
-## Registered Report
-* View the [registered report here](docs/regrep.pdf).
-* [Pilot Study](src/data-processing/pilot_checks.md) Demonstrates design choices made in the pilot studies.
+## Preregistration
+* View the preregistration plan [here](https://aspredicted.org/YST_2GHf) - anonymous.
+* [Pilot Study](src/data-processing/pilot_checks.md) Demonstrates design choices made in the pilot studies where we realized the conceptual overlap between populism and collective nostalgia.
 
 ## Data
 The following data files might be of interest:
 
-* [Pilot Study 1](data/intermediate/PS1.RData) Pilot Study Treatment 1.
-* [Pilot Study 2](data/intermediate/PS2.RData) Pilot Study Treatment 2.
+* [Pilot Study 1](data/intermediate/PS1.RData) &amp; [2](data/intermediate/PS2.RData) to learn about the conceptual overlap between populism and collective nostalgia.
+* [Observational Data](data/intermediate/cleaned_obs_data.Rdata) to run the measurement models (H1) and the descriptive analysis of nostalgia (H2).
+* [Experimental Data](data/intermediate/cleaned_experiment.Rdata) to estimate the effect of nostalgic rhetoric (H3).
 
-See the scripts in `src/data-processing` for details on how these files were constructed  for the [first and second pilot study](src/data-processing/prepare-data-pilot.md).
+See the scripts in `src/data-processing` for details on the pilot data and `src/analysis` for the data used in the paper.
 
 ## Results
 *[Study](src/analysis/analysis.md) Shows the results for the pre-registered hypotheses as well as the explorative analysis.

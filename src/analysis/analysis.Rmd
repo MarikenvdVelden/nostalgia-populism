@@ -31,6 +31,7 @@ load(here("data/raw-private/cleaned_data_w1.RData"))
 df <- read_csv(here("data/raw-private/OpenQ_coded.csv"))
 load(here("data/raw-private/cleaned_data_w4.RData"))
 source(here("src/analysis/data_for_analysis_exp.R"))
+save(d, file = here("data/intermediate/cleaned_experiment.RData"))
 ```
 
 ## Measurement Models -- Checks
@@ -77,6 +78,7 @@ check <- df %>%
   filter(value == 1)
 
 paste0(round(dim(check)[1]/dim(df)[1]*100,2), "% of people feeling both individually and collectively nostalgic")
+save(ds1, file = here("data/intermediate/cleaned_obs_data.RData"))
 ```
 
 ```{r "open-q2", fig.width=12, fig.height=8}
