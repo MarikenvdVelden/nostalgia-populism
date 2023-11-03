@@ -1,0 +1,272 @@
+---
+title: 'Measurement of Nostalgia'
+author: 
+output: 
+  github_document:
+    toc: yes
+always_allow_html: true
+editor_options: 
+  
+  chunk_output_type: console
+---
+
+```{r "setup", include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
+                      fig.align = "center",
+                      fig.path=('../../report/figures/'))
+library(printr)
+options(digits = 2)
+library(rmarkdown)
+```
+
+## Required Packages &amp; Reproducibility
+```{r "env", message=FALSE, warning=F}
+rm(list=ls())
+source(here::here("src/lib/functions.R"))
+#renv::snapshot()
+```
+
+## Pilot Data
+```{r "get data", message=FALSE}
+d1 <- fetch_survey(surveyID = "SV_6nXTxSvj5FOOZsW", #anonymous message
+                    verbose = TRUE, force_request = T,
+                    label = FALSE, convert = FALSE) %>% 
+  select(matches("collective-nostalgia_"),
+         pop1 = "populist_attitudes_1",
+         pop2 = "populist_attitudes_2",
+         pop3 = "populist_attitudes_3",
+         pop4 = "populist_attitudes_4",
+         pop5 = "populist_attitudes_5",
+         pop6 = "populist_attitudes_6",
+         pop7 = "populist_attitudes_7",
+         pop8 = "populist_attitudes_8",
+         pluralism1 = "populist_attitudes_9",
+         pluralism2 = "populist_attitudes_10",
+         pluralism3 = "populist_attitudes_11",
+         elitism1 = "populist_attitudes_12",
+         elitism2 = "populist_attitudes_13",
+         elitism3 = "populist_attitudes_14") 
+
+d2 <- fetch_survey(surveyID = "SV_8H3HjWDoT94ymRE", #FvD message
+                    verbose = TRUE, force_request = T,
+                    label = FALSE, convert = FALSE) %>% 
+   select(matches("collective-nostalgia_"),
+         pop1 = "populist_attitudes_1",
+         pop2 = "populist_attitudes_2",
+         pop3 = "populist_attitudes_3",
+         pop4 = "populist_attitudes_4",
+         pop5 = "populist_attitudes_5",
+         pop6 = "populist_attitudes_6",
+         pop7 = "populist_attitudes_7",
+         pop8 = "populist_attitudes_8",
+         pluralism1 = "populist_attitudes_9",
+         pluralism2 = "populist_attitudes_10",
+         pluralism3 = "populist_attitudes_11",
+         elitism1 = "populist_attitudes_12",
+         elitism2 = "populist_attitudes_13",
+         elitism3 = "populist_attitudes_14")
+
+d <- d1 %>% add_row(d2) %>% 
+  mutate(pluralism3 = 6 - pluralism3)
+
+rm(d1,d2)
+```
+
+## Items & Type of Nostalgia
+```{r "items"}
+df <- tibble(
+  `Item #` = c("collective-nostalgia_1", 
+               "collective-nostalgia_2",
+               "collective-nostalgia_3",
+               "collective-nostalgia_4",
+               "pop1", "pop2", "pop3",
+               "pop4", "pop5", "pop6",
+               "pop7", "pop8", "pluralism1",
+               "pluralism2", "pluralism3",
+               "elitism1", "elitism2", "elitism3"),
+  `Survey Item` = c("When I listen to new music, I miss the old days and those beautiful folk songs.",
+                    "We should not forget the values we used to have in the past",
+                    "I miss the good, old glory days of my country.",
+                    "We can only solve the problems we now experience as 'the people' by looking to our past.",
+                    "Politicians in the Dutch parliament must follow the will of the people.",
+                    "The people, not politicians, must make our most important policy decisions.",
+                    "The political differences between the elite and the people are greater than the differences among the people.",
+                    "I would rather be represented by a citizen than a specialized politician.",
+                    "Elected officials talk too much and take too little action.",
+                    "Politics is ultimately a battle between good and evil.",
+                    "What is called 'compromise' in politics is really just the selling out of his principles.",
+                    "Interest groups have too much influence over political decisions.",
+                    "In a democracy, it is important to compromise between different points of view.",
+                    "It is important to listen to the opinions of other groups.",
+                    "Diversity restricts my freedom.",
+                    "Politicians should lead rather than follow the people.",
+                    "Our country would be better governed if important decisions were left to successful businessmen.",
+                    "Our country would be better governed if important decisions were left to independent experts."),
+  `Intended Concept` = c(rep("Collective Nostalgia (Smeekes et al. 2014)", 4),
+                         rep("Populist Attitudes (Akkerman et al. 2014)", 14)),
+  `Nostalgia Mode` = c("Playful Nostalgia",
+                       "Reluctant, Progressive or Playful Nostalgia",
+                       "Reluctant Nostalgia",
+                       "Reluctant Nostalgia",
+                       "None or Reluctant Nostalgia",
+                       "None, Reluctant or Progressive Nostalgia",
+                       "None, Reluctant or Progressive Nostalgia",
+                       "None or Reluctant Nostalgia",
+                       "None or Reluctant Nostalgia",
+                       "None",
+                       "None",
+                       "None or Reluctant Nostalgia",
+                       "None",
+                       "None or Reluctant Nostalgia",
+                       "None or Reluctant Nostalgia",
+                       "None",
+                       "None or Reluctant Nostalgia",
+                       "None or Reluctant Nostalgia")
+)
+
+ggcorrmat(d,
+  type = "robust", # correlation method
+  cor.vars = c(matches("collective-nostalgia")), # a range of variables can be selected
+  colors = c(fig_cols[1], fig_cols[8], fig_cols[2]),
+  title = "Correlalogram for Variables under Study"
+)
+
+ggcorrmat(d,
+  type = "robust", # correlation method
+  cor.vars = c(matches("pop"),
+               matches("pluralism"),
+               matches("elitism")), # a range of variables can be selected
+  colors = c(fig_cols[1], fig_cols[8], fig_cols[2]),
+  title = "Correlalogram for Variables under Study"
+)
+
+ggcorrmat(d,
+  type = "robust", # correlation method
+  cor.vars = c(everything()), # a range of variables can be selected
+  colors = c(fig_cols[1], fig_cols[8], fig_cols[2]),
+  title = "Correlalogram for Variables under Study"
+)
+```
+
+```{r "all correlations"}
+fetch_survey(surveyID = "SV_6nXTxSvj5FOOZsW", #anonymous message
+                    verbose = TRUE, force_request = T,
+                    label = FALSE, convert = FALSE) %>% 
+  select(matches("collective-nostalgia_"),
+         matches("populist_attitudes_"),
+         matches("relative_deprivation_"),
+         matches("nativism_")) %>% 
+  mutate(populist_attitudes_11 = 6 - populist_attitudes_11) %>% 
+  ggcorrmat(
+  type = "robust", # correlation method
+  cor.vars = c(everything()), # a range of variables can be selected
+  colors = c(fig_cols[1], fig_cols[8], fig_cols[2]),
+  title = "Correlalogram for Variables under Study"
+)
+
+
+fetch_survey(surveyID = "SV_8H3HjWDoT94ymRE", #FvD message
+                    verbose = TRUE, force_request = T,
+                    label = FALSE, convert = FALSE) %>% 
+  mutate(populist_attitudes_11 = 6 - populist_attitudes_11) %>%
+  select(matches("collective-nostalgia_"),
+         matches("populist_attitudes_"),
+         `Gedragen als NL`: `Trots NL`) %>% 
+  ggcorrmat(
+  type = "robust", # correlation method
+  cor.vars = c(everything()), # a range of variables can be selected
+  colors = c(fig_cols[1], fig_cols[8], fig_cols[2]),
+  title = "Correlalogram for Variables under Study"
+)
+```
+
+```{r "latent class"}
+f <- cbind(`collective-nostalgia_1`,
+            `collective-nostalgia_2`,
+            `collective-nostalgia_3`,
+            `collective-nostalgia_4`,
+            pop1, pop2, pop3, pop4,
+            pop5, pop6, pop7, pop8,
+            pluralism1, pluralism2, pluralism3,
+            elitism1, elitism2, elitism3) ~1
+
+for(i in 1:10){
+  if(i==1){
+    m_lca <- tidy(poLCA(formula = f, maxiter=1000, nclass=i, nrep=80, data=d, na.rm=T))
+  }
+  else{
+    tmp <- tidy(poLCA(formula = f, maxiter=1000, nclass=i, nrep=80, data=d, na.rm=T))
+    m_lca <- m_lca %>% 
+      add_case(tmp)
+  }
+}
+
+save(m_lca, file = here("data/intermediate/lca_models.RData"))
+
+
+tmp <- poLCA(formula = f, maxiter=1000, nclass=3, nrep=80, data=d, na.rm=T)
+tmp$predclass <- as.numeric(tmp$predclass)
+
+## BIC for 6 classes 27929.62 (for 3 and 4 classes it's lower!)
+## BIC for 8 classes 28532.59
+
+d <- d %>% drop_na()
+d$class <- tmp$predclass # take the predictor for the class and add it to the data frame
+
+mean_class1 <- apply(d[which(d$class==1),1:18], 2, mean, na.rm=T)
+mean_class2 <- apply(d[which(d$class==2),1:18], 2, mean)
+mean_class3 <- apply(d[which(d$class==3),1:18], 2, mean)
+mean_class4 <- apply(d[which(d$class==4),1:18], 2, mean)
+mean_class5 <- apply(d[which(d$class==5),1:18], 2, mean)
+mean_class6 <- apply(d[which(d$class==6),1:18], 2, mean)
+mean_class7 <- apply(d[which(d$class==7),1:18], 2, mean)
+mean_class8 <- apply(d[which(d$class==8),1:18], 2, mean)
+
+mean <- c(mean_class1, mean_class2, mean_class3,
+          mean_class4, mean_class5, mean_class6,
+         mean_class7, mean_class8) # group means into 1 variable
+id <- c(rep("Latent Class 1", length(mean_class1)), # create id to separate lines in graph per class
+        rep("Latent Class 2", length(mean_class2)),
+        rep("Latent Class 3", length(mean_class3)),
+        rep("Latent Class 4", length(mean_class4)), # create id to separate lines in graph per class
+        rep("Latent Class 5", length(mean_class5)),
+        rep("Latent Class 6", length(mean_class6)),
+        rep("Latent Class 7", length(mean_class7)),
+        rep("Latent Class 8", length(mean_class8)))
+
+items <- c("collective-nostalgia_1", 
+               "collective-nostalgia_2",
+               "collective-nostalgia_3",
+               "collective-nostalgia_4",
+               "pop1", "pop2", "pop3",
+               "pop4", "pop5", "pop6",
+               "pop7", "pop8", "pluralism1",
+               "pluralism2", "pluralism3",
+               "elitism1", "elitism2", "elitism3")
+
+
+data <- data.frame(items,id, mean)
+
+ggplot(data, aes(x = items, y = mean, group = id,
+             color = id)) +
+  geom_point() +
+  geom_line() +
+  theme_ipsum() +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1, vjust = 1))
+
+
+m_lca %>% 
+  filter(class==3) %>% 
+  group_by(variable, outcome) %>% 
+  summarise(m = mean(estimate),
+            std = mean(`std.error`)) %>%
+  ungroup() %>% 
+  ggplot(aes(x = variable, y = m, group = outcome,
+             color = outcome)) +
+  geom_point() +
+  geom_line() +
+  facet_grid(. ~ class) +
+  theme_ipsum() +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1, vjust = 1))
+
+```

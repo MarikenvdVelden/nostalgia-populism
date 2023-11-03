@@ -1,0 +1,185 @@
+---
+title: 'Data Analysis'
+author: 
+output: 
+  github_document:
+    toc: yes
+  #pdf_document:
+  #  dev: cairo_pdf
+always_allow_html: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r "setup", include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE,
+                      fig.align = "center",
+                      fig.path=('../../report/figures/'))
+library(printr)
+options(digits = 2)
+library(rmarkdown)
+```
+
+```{r "env", message=FALSE, warning=F}
+rm(list = ls(all.names = TRUE)) #will clear all objects includes hidden objects.
+source(here::here("src/lib/functions.R"))
+#renv::snapshot()
+```
+
+```{r "get data"}
+load(here("data/raw-private/cleaned_data_w1.RData"))
+df <- read_csv(here("data/raw-private/OpenQ_coded.csv"))
+load(here("data/raw-private/cleaned_data_w4.RData"))
+source(here("src/analysis/data_for_analysis_exp.R"))
+```
+
+## Measurement Models -- Checks
+```{r "measurement", fig.width=15, fig.height=8}
+#source(here("src/analysis/measurementmodels.R"))
+source(here("src/analysis/mm2.R"))
+p1
+p2
+p1 + p2 +  plot_layout(widths = c(2, 1))
+```
+
+```{r "corr", fig.width=8, fig.height=8}
+p3
+```
+
+## Measurement Models -- Fig. 1 in paper
+```{r "corr-concepts", fig.width=8, fig.height=8}
+dc <- cor(tmp[sapply(tmp,is.numeric)]) %>% 
+  reshape2::melt() %>% 
+  #filter(Var1 == "Populist Attitudes" & Var2 != "Populist Attitudes") %>% 
+  mutate(value = round(value, 2)) 
+
+ggplot(dc, aes(x = Var1, y = Var2, 
+               fill = value, label = value)) +
+  geom_tile() +
+  geom_text() +
+  labs(x = " ",
+       y = " ") +
+  theme_ipsum() +
+  scale_fill_gradient(low = fig_cols[6], high = fig_cols[1]) +
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+```
+
+## Types of Nostalgia
+```{r "open-q", fig.width=12, fig.height=12}
+source(here("src/analysis/openQ.R"))
+p1
+ttest
+
+check <- df %>% 
+  filter(youth==1) %>% 
+  pivot_longer(cols = anti_eu:colonialism) %>% 
+  filter(value == 1)
+
+paste0(round(dim(check)[1]/dim(df)[1]*100,2), "% of people feeling both individually and collectively nostalgic")
+```
+
+```{r "open-q2", fig.width=12, fig.height=8}
+p2
+```
+
+## Figure 2
+```{r "nost-ideo", fig.width=12, fig.height=8}
+p2b
+```
+
+```{r "descr", fig.width=12, fig.height=12}
+source(here("src/analysis/decr_nostalgia_types.R"))
+p1
+p2
+p3
+p4
+```
+
+## Experiment 
+
+```{r "treatment-view", fig.width=12, fig.height=6, eval=T}
+d <- d %>% 
+  mutate(treatment = ifelse(scapegoat == 0 & nostalgia == 0, "No Nostalgia, No Scapegoat", NA),
+         treatment = ifelse(scapegoat == 0 & nostalgia == 1, "Nostalgia, No Scapegoat", treatment),
+         treatment = ifelse(scapegoat == 1 & nostalgia == 0, "No Nostalgia, Scapegoat", treatment),
+         treatment = ifelse(scapegoat == 1 & nostalgia == 1, "Nostalgia, Scapegoat", treatment),
+         H18 = H18 - 1)
+d %>% 
+  dplyr::select(H18, treatment) %>% 
+  group_by(treatment) %>% 
+  ggplot(aes(x = treatment, y = H18)) +
+  see::geom_violinhalf(fill = fig_cols[9], alpha = .4,
+                       color = "white") +
+  stat_summary(fun.data = "mean_cl_boot", geom = "pointrange",
+               colour = "gray55") +
+  labs(x = "", y = "Support for Message") +
+  theme_ipsum() +
+  coord_flip()
+```
+
+### H1: Populist voters will be more supportive of messages that mention a scapegoat than non-populist voters.
+
+```{r "testing-h1", fig.width=12, fig.height=6, eval=T}
+source(here("src/analysis/h1_exp.R"))
+```
+
+
+## H2: Right-wing voters will be more supportive of nostalgic messages than left-wing voters
+
+```{r "testing-h2", fig.width=12, fig.height=8, eval=T}
+source(here("src/analysis/h2_exp.R"))
+```
+
+## H3: All voters will be more supportive of nostalgic messages than non-nostalgic messages
+
+```{r "testing-h3", fig.width=12, fig.height=6, eval=T}
+source(here("src/analysis/h3_exp.R"))
+```
+
+```{r "viz-h3", fig.width=8, fig.height=6, eval=T}
+h1 %>% 
+  add_case(h2) %>% 
+  add_case(h3) %>% 
+  filter(y == "Support for Message") %>% 
+  mutate(hyp = factor(hyp,
+                      levels = c("Hypothesis 3",
+                                 "Heterogeneous Treatment Effect"))) %>% 
+  ggplot(aes(x = estimate, y = var,
+             xmin = lower, xmax = upper,
+             color = factor)) +
+  geom_point(position = position_dodge(width = 0.5)) + 
+  geom_errorbar(width = 0, position = position_dodge(width = 0.5)) +
+  theme_ipsum() +
+  labs(x = "Regression Estimates",
+       y = "",
+       caption = "Reference category: No Nostalgia, No Scapegoat") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray85") +
+  #facet_wrap(vars(hyp), ncol = 2, scales = "free") +
+    facet_grid(hyp ~ y, scales = "free") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank())
+```
+
+```{r "viz-h3-dv2", fig.width=15, fig.height=6, eval=T}
+h3 %>% 
+  filter(y != "Support for Message") %>% 
+  mutate(hyp = factor(hyp,
+                      levels = c("Hypothesis 3",
+                                 "Heterogeneous Treatment Effect"))) %>% 
+ ggplot(aes(x = estimate, y = var,
+             xmin = lower, xmax = upper,
+             color = factor)) +
+  geom_point(position = position_dodge(.5)) +
+  geom_errorbar(position = position_dodge(.5), width = 0) +
+  theme_ipsum() +
+  scale_fill_manual(values = fig_cols) +
+  labs(x = "Prediction Support for Message",
+       y = "",
+       caption = "Reference category: No Nostalgia, No Scapegoat") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray85") +
+  facet_grid(hyp ~ y, scales = "free") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank()) +
+  guides(color=guide_legend(nrow=1,byrow=TRUE))
+```

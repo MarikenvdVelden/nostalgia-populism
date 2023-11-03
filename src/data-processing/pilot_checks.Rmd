@@ -29,6 +29,10 @@ source(here::here("src/lib/functions.R"))
 ## Pilot Data
 ```{r "get data", message=FALSE}
 load(here("data/intermediate/pilot1.RData")) 
+df1 <- d1 %>% 
+  select(education, gender, age, ideology, collective_nostalgia,
+         populist:elitist, nostalgia:message, nativism)
+
 d1 <- d1 %>% 
   select(education, gender, age, ideology, collective_nostalgia,
          populist:elitist, nostalgia:message)
@@ -295,3 +299,27 @@ m11 %>% add_row(m12) %>% add_row(m13) %>%
   geom_hline(yintercept = 0, size = .2, linetype = "dashed") 
 ```
 
+## Correlation with Nativism
+```{r "nostalgia-nativism", fig.width=10, fig.height=8}
+df1 <- df1 %>% 
+  mutate(nativism = replace_na(nativism, round(mean(nativism, na.rm=T),0)),
+         collective_nostalgia = replace_na(collective_nostalgia, 
+                                           round(mean(collective_nostalgia, na.rm=T),0)))
+cor(df1$collective_nostalgia, df1$nativism,use = "all.obs")
+
+summary(lm(collective_nostalgia ~ nativism + as.factor(nostalgic_message) + 
+             as.factor(nostalgia) + as.factor(issue), df1))
+summary(lm(nativism ~ collective_nostalgia + as.factor(nostalgic_message)  + 
+             as.factor(nostalgia) + as.factor(issue), df1))
+```
+
+## Age differences
+```{r "nostalgia-nativism", fig.width=10, fig.height=8}
+d <- d %>% 
+  mutate(age = replace_na(age, round(mean(age, na.rm=T),0)),
+         collective_nostalgia = replace_na(collective_nostalgia, 
+                                           round(mean(collective_nostalgia, na.rm=T),0)))
+cor(d$age, d$collective_nostalgia)
+summary(lm(collective_nostalgia ~ age + as.factor(nostalgic_message) + 
+             as.factor(nostalgia) + as.factor(issue), d))
+```
