@@ -17,7 +17,7 @@ The following data files might be of interest:
 See the scripts in `src/data-processing` for details on the pilot data and `src/analysis` for the data used in the paper.
 
 ## Results
-*[Study](src/analysis/analysis.md) Shows the results for the pre-registered hypotheses as well as the explorative analysis.
+* [This page](src/analysis/analysis.md) shows the results for the the explorative analysis (H1 and H2) as well as the pre-registered hypothesis (H3).
 
 ## Code of Conduct
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
