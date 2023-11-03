@@ -7,6 +7,9 @@ This repository combines the preregistration plan and the paper with the data &a
 * View the preregistration plan [here](https://aspredicted.org/YST_2GHf) - anonymous.
 * [Pilot Study](src/data-processing/pilot_checks.md) Demonstrates design choices made in the pilot studies where we realized the conceptual overlap between populism and collective nostalgia.
 
+## Paper
+View the draft of the paper [here](report/draft.pdf)
+
 ## Data
 The following data files might be of interest:
 
