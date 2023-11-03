@@ -415,7 +415,9 @@ kbl(df[1:4,], booktabs =T, caption = "\\label{tab:nost-treat1} Experimental Trea
 
 ***Control Variables.*** Based on a balance test (see our [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism) for details), we included unbalanced demographic covariates as well as the ideological tone of the experimental message, whether it was a nostalgic and/or scapegoat message into our analysis.
 
-***Methods of Estimation.*** We use PCA and a Pearson's Rho correlation to test H1. 
+## Methods of Estimation Studies 1--3.
+
+We use PCA and a Pearson's Rho correlation to test H1. 
 We use descriptive statistics and a t-test for H2.
 For H3, we employ simple OLS regressions. 
 All analytical material is published in our [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism).

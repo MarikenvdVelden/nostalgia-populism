@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  3 NOV 2023 07:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  3 NOV 2023 07:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -765,38 +765,38 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6{/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [7] [8]
-<figures/corr-concepts-1.png, id=124, 770.88pt x 770.88pt>
+[6{/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [7] [8] [9]
+<figures/corr-concepts-1.png, id=139, 770.88pt x 770.88pt>
 File: figures/corr-concepts-1.png Graphic file (type png)
 <use figures/corr-concepts-1.png>
-Package pdftex.def Info: figures/corr-concepts-1.png  used on input line 857.
+Package pdftex.def Info: figures/corr-concepts-1.png  used on input line 860.
 (pdftex.def)             Requested size: 328.82707pt x 328.82535pt.
-[9] [10 <./figures/corr-concepts-1.png>]
-<figures/nost-ideo-1.png, id=153, 1156.32pt x 770.88pt>
+[10 <./figures/corr-concepts-1.png>]
+<figures/nost-ideo-1.png, id=157, 1156.32pt x 770.88pt>
 File: figures/nost-ideo-1.png Graphic file (type png)
 <use figures/nost-ideo-1.png>
-Package pdftex.def Info: figures/nost-ideo-1.png  used on input line 938.
+Package pdftex.def Info: figures/nost-ideo-1.png  used on input line 941.
 (pdftex.def)             Requested size: 422.77664pt x 281.84525pt.
 [11] [12 <./figures/nost-ideo-1.png>]
-<figures/treatment-view-1.png, id=165, 1156.32pt x 578.16pt>
+<figures/treatment-view-1.png, id=170, 1156.32pt x 578.16pt>
 File: figures/treatment-view-1.png Graphic file (type png)
 <use figures/treatment-view-1.png>
-Package pdftex.def Info: figures/treatment-view-1.png  used on input line 1019.
+Package pdftex.def Info: figures/treatment-view-1.png  used on input line 1022.
 (pdftex.def)             Requested size: 469.75502pt x 234.87692pt.
 [13 <./figures/treatment-view-1.png>]
-<figures/viz-h3-1.png, id=177, 770.88pt x 578.16pt>
+<figures/viz-h3-1.png, id=182, 770.88pt x 578.16pt>
 File: figures/viz-h3-1.png Graphic file (type png)
 <use figures/viz-h3-1.png>
-Package pdftex.def Info: figures/viz-h3-1.png  used on input line 1051.
+Package pdftex.def Info: figures/viz-h3-1.png  used on input line 1054.
 (pdftex.def)             Requested size: 469.75502pt x 352.31538pt.
 [14 <./figures/viz-h3-1.png>]
-<figures/viz-h3-dv2-1.png, id=186, 1445.4pt x 578.16pt>
+<figures/viz-h3-dv2-1.png, id=191, 1445.4pt x 578.16pt>
 File: figures/viz-h3-dv2-1.png Graphic file (type png)
 <use figures/viz-h3-dv2-1.png>
-Package pdftex.def Info: figures/viz-h3-dv2-1.png  used on input line 1073.
+Package pdftex.def Info: figures/viz-h3-dv2-1.png  used on input line 1076.
 (pdftex.def)             Requested size: 469.75502pt x 187.89977pt.
 [15 <./figures/viz-h3-dv2-1.png>] [16]
-Overfull \hbox (38.35748pt too wide) in paragraph at lines 1261--1265
+Overfull \hbox (38.35748pt too wide) in paragraph at lines 1264--1268
 \T1/lmr/m/n/10.95 Person Ef-fect.'' \T1/lmr/m/it/10.95 Com-mu-ni-ca-tion Re-search \T1/lmr/m/n/10.95 18 (3): 355--72. [][]$https : / / doi . org / 10 . 1177 / 009365091018003004$[][]. 
  []
 
@@ -809,21 +809,21 @@ L3 programming layer <2023-10-10>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `draft.out' has not changed.
-(rerunfilecheck)             Checksum: 5AC927CD38770994CFFACF64C48C5441;2343.
+(rerunfilecheck)             Checksum: FEFDF706A38F2559FA651E3ABEE9ED7F;2587.
  ) 
 Here is how much of TeX's memory you used:
- 19566 strings out of 476470
- 355910 string characters out of 5800369
+ 19570 strings out of 476470
+ 356008 string characters out of 5800369
  1951040 words of memory out of 5000000
- 40856 multiletter control sequences out of 15000+600000
+ 40858 multiletter control sequences out of 15000+600000
  639197 words of font info for 94 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 89i,11n,95p,542b,967s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,11n,95p,542b,921s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on draft.pdf (20 pages, 597270 bytes).
+Output written on draft.pdf (20 pages, 597174 bytes).
 PDF statistics:
- 422 PDF objects out of 1000 (max. 8388607)
- 355 compressed objects within 4 object streams
- 108 named destinations out of 1000 (max. 500000)
- 114 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 429 PDF objects out of 1000 (max. 8388607)
+ 362 compressed objects within 4 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 122 words of extra memory for PDF output out of 10000 (max. 10000000)
 
