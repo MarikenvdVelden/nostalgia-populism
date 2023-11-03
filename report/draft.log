@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  31 OCT 2023 17:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.13)  3 NOV 2023 07:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -539,12 +539,12 @@ Package: amsthm 2020/05/29 v2.20.6
 \dth@everypar=\toks41
 )
 \c@hypo=\count324
-Package hyperref Info: Option `breaklinks' set `true' on input line 142.
+Package hyperref Info: Option `breaklinks' set `true' on input line 158.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 142.
+(hyperref)                setting the option has no effect on input line 158.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 142.
+Package hyperref Info: Option `colorlinks' set `true' on input line 158.
 (/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
@@ -627,24 +627,24 @@ LaTeX Warning: Label `fig:results-treatment' multiply defined.
 )
 \openout1 = `draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 186.
-LaTeX Font Info:    ... okay on input line 186.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -688,95 +688,119 @@ Package: fr-longtable 2007/11/28 v0.1b (beta) floatrow: additions for longtable
 \flrow@LT@prelastfoot=\box84
 \c@FBLTpage=\count338
 )
-Package hyperref Info: Link coloring ON on input line 186.
+Package hyperref Info: Link coloring ON on input line 202.
 (./draft.out) (./draft.out)
 \@outlinefile=\write3
 \openout3 = `draft.out'.
 
-[1
-
-{/Users/marikenvandervelden/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 318.
+LaTeX Font Info:    Calculating math sizes for size <18> on input line 213.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 213.
 (/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 318.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 213.
 (/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 318.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 213.
 (/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 318.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 213.
 (/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 318.
+(Font)              <18> on input line 213.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 318.
+(Font)              <12.59995> on input line 213.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 318.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 318.
+(Font)              <9> on input line 213.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 213.
 (/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 318.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 213.
 (/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 213.
+(/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 320.
+(Font)              <6> on input line 213.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 320.
-[2] [3] [4] [5] [6] [7]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 575.
+(Font)              <5> on input line 213.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 219.
+(/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <11> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 219.
+[1
+
+{/Users/marikenvandervelden/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 342.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 342.
+[2] [3] [4]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 601.
 (/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (33.48904pt too wide) in paragraph at lines 596--625
+Underfull \hbox (badness 2635) in paragraph at lines 608--608
+[][][]\T1/lmr/m/n/9 Our an-a-lyt-i-cal code is avail-able on our On-line Com-pendium: [][]$https : / / github . com / MarikenvdVelden /
+ []
+
+[5]
+Overfull \hbox (33.48904pt too wide) in paragraph at lines 625--654
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8] [9] [10{/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [11] [12]
-<figures/corr-concepts-1.png, id=132, 770.88pt x 770.88pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6{/Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [7] [8]
+<figures/corr-concepts-1.png, id=124, 770.88pt x 770.88pt>
 File: figures/corr-concepts-1.png Graphic file (type png)
 <use figures/corr-concepts-1.png>
-Package pdftex.def Info: figures/corr-concepts-1.png  used on input line 822.
+Package pdftex.def Info: figures/corr-concepts-1.png  used on input line 857.
 (pdftex.def)             Requested size: 328.82707pt x 328.82535pt.
-[13] [14 <./figures/corr-concepts-1.png>]
-<figures/nost-ideo-1.png, id=155, 1156.32pt x 770.88pt>
+[9] [10 <./figures/corr-concepts-1.png>]
+<figures/nost-ideo-1.png, id=153, 1156.32pt x 770.88pt>
 File: figures/nost-ideo-1.png Graphic file (type png)
 <use figures/nost-ideo-1.png>
-Package pdftex.def Info: figures/nost-ideo-1.png  used on input line 903.
+Package pdftex.def Info: figures/nost-ideo-1.png  used on input line 938.
 (pdftex.def)             Requested size: 422.77664pt x 281.84525pt.
-[15] [16 <./figures/nost-ideo-1.png>] [17]
-<figures/treatment-view-1.png, id=175, 1156.32pt x 578.16pt>
+[11] [12 <./figures/nost-ideo-1.png>]
+<figures/treatment-view-1.png, id=165, 1156.32pt x 578.16pt>
 File: figures/treatment-view-1.png Graphic file (type png)
 <use figures/treatment-view-1.png>
-Package pdftex.def Info: figures/treatment-view-1.png  used on input line 984.
+Package pdftex.def Info: figures/treatment-view-1.png  used on input line 1019.
 (pdftex.def)             Requested size: 469.75502pt x 234.87692pt.
-<figures/viz-h3-1.png, id=178, 770.88pt x 578.16pt>
+[13 <./figures/treatment-view-1.png>]
+<figures/viz-h3-1.png, id=177, 770.88pt x 578.16pt>
 File: figures/viz-h3-1.png Graphic file (type png)
 <use figures/viz-h3-1.png>
-Package pdftex.def Info: figures/viz-h3-1.png  used on input line 1016.
+Package pdftex.def Info: figures/viz-h3-1.png  used on input line 1051.
 (pdftex.def)             Requested size: 469.75502pt x 352.31538pt.
-[18 <./figures/treatment-view-1.png>] [19 <./figures/viz-h3-1.png>]
-<figures/viz-h3-dv2-1.png, id=193, 1445.4pt x 578.16pt>
+[14 <./figures/viz-h3-1.png>]
+<figures/viz-h3-dv2-1.png, id=186, 1445.4pt x 578.16pt>
 File: figures/viz-h3-dv2-1.png Graphic file (type png)
 <use figures/viz-h3-dv2-1.png>
-Package pdftex.def Info: figures/viz-h3-dv2-1.png  used on input line 1038.
+Package pdftex.def Info: figures/viz-h3-dv2-1.png  used on input line 1073.
 (pdftex.def)             Requested size: 469.75502pt x 187.89977pt.
-[20 <./figures/viz-h3-dv2-1.png>] [21] [22] [23]
-Overfull \hbox (38.35748pt too wide) in paragraph at lines 1226--1230
+[15 <./figures/viz-h3-dv2-1.png>] [16]
+Overfull \hbox (38.35748pt too wide) in paragraph at lines 1261--1265
 \T1/lmr/m/n/10.95 Person Ef-fect.'' \T1/lmr/m/it/10.95 Com-mu-ni-ca-tion Re-search \T1/lmr/m/n/10.95 18 (3): 355--72. [][]$https : / / doi . org / 10 . 1177 / 009365091018003004$[][]. 
  []
 
-[24] [25] [26] [27] (./draft.aux)
+[17] [18] [19] [20] (./draft.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
@@ -788,18 +812,18 @@ Package rerunfilecheck Info: File `draft.out' has not changed.
 (rerunfilecheck)             Checksum: 5AC927CD38770994CFFACF64C48C5441;2343.
  ) 
 Here is how much of TeX's memory you used:
- 19454 strings out of 476470
- 353812 string characters out of 5800369
- 1947040 words of memory out of 5000000
- 40759 multiletter control sequences out of 15000+600000
- 610156 words of font info for 75 fonts, out of 8000000 for 9000
+ 19566 strings out of 476470
+ 355910 string characters out of 5800369
+ 1951040 words of memory out of 5000000
+ 40856 multiletter control sequences out of 15000+600000
+ 639197 words of font info for 94 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 89i,11n,95p,542b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt9.pfb>
-Output written on draft.pdf (27 pages, 552498 bytes).
+ 89i,11n,95p,542b,967s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri9.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt9.pfb></Users/marikenvandervelden/Library/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb>
+Output written on draft.pdf (20 pages, 597270 bytes).
 PDF statistics:
- 426 PDF objects out of 1000 (max. 8388607)
- 359 compressed objects within 4 object streams
- 113 named destinations out of 1000 (max. 500000)
+ 422 PDF objects out of 1000 (max. 8388607)
+ 355 compressed objects within 4 object streams
+ 108 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
