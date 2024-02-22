@@ -385,10 +385,19 @@ Respondents could select any of the four texts we created for the experiment (se
 
 ## Methods of Estimation
 
+<<<<<<< HEAD
 We used PCA and a Pearson's Rho correlation to test H1. 
 We used descriptive statistics and a t-test for H2.
 For H3, we employed simple OLS regressions. 
 All analytical material is published in our [Online Compendium](https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md).
+=======
+## Methods of Estimation Studies 1--3.
+
+We use PCA and a Pearson's Rho correlation to test H1. 
+We use descriptive statistics and a t-test for H2.
+For H3, we employ simple OLS regressions. 
+All analytical material is published in our [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism).
+>>>>>>> 8699732ebf82c901e5953133384e999094f50fc5
 
 # Message Support and Nostalgic Rhetoric
 
