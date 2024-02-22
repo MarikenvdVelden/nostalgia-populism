@@ -7,15 +7,17 @@ Data Analysis
 - [Types of Nostalgia](#types-of-nostalgia)
 - [Figure 2](#figure-2)
 - [Experiment](#experiment)
-  - [H1: Populist voters will be more supportive of messages that
-    mention a scapegoat than non-populist
-    voters.](#h1-populist-voters-will-be-more-supportive-of-messages-that-mention-a-scapegoat-than-non-populist-voters)
-- [H2: Right-wing voters will be more supportive of nostalgic messages
-  than left-wing
-  voters](#h2-right-wing-voters-will-be-more-supportive-of-nostalgic-messages-than-left-wing-voters)
 - [H3: All voters will be more supportive of nostalgic messages than
   non-nostalgic
   messages](#h3-all-voters-will-be-more-supportive-of-nostalgic-messages-than-non-nostalgic-messages)
+  - [Populist voters will be more supportive of messages that mention a
+    scapegoat than non-populist
+    voters.](#populist-voters-will-be-more-supportive-of-messages-that-mention-a-scapegoat-than-non-populist-voters)
+- [Right-wing voters will be more supportive of nostalgic messages than
+  left-wing
+  voters](#right-wing-voters-will-be-more-supportive-of-nostalgic-messages-than-left-wing-voters)
+  - [Figure 4 in paper](#figure-4-in-paper)
+  - [Robustness](#robustness)
 
 ## Measurement Models – Checks
 
@@ -25,7 +27,7 @@ Data Analysis
 
 ## Measurement Models – Fig. 1 in paper
 
-<img src="../../report/figures/corr-concepts-1.png" style="display: block; margin: auto;" />
+<img src="../../report/figures/corr-concepts-1.png" style="display: block; margin: auto;" /><img src="../../report/figures/corr-concepts-2.png" style="display: block; margin: auto;" />
 
 ## Types of Nostalgia
 
@@ -107,12 +109,20 @@ sign
 
 <img src="../../report/figures/treatment-view-1.png" style="display: block; margin: auto;" />
 
-### H1: Populist voters will be more supportive of messages that mention a scapegoat than non-populist voters.
-
-## H2: Right-wing voters will be more supportive of nostalgic messages than left-wing voters
-
 ## H3: All voters will be more supportive of nostalgic messages than non-nostalgic messages
+
+### Populist voters will be more supportive of messages that mention a scapegoat than non-populist voters.
+
+## Right-wing voters will be more supportive of nostalgic messages than left-wing voters
+
+### Figure 4 in paper
 
 <img src="../../report/figures/viz-h3-1.png" style="display: block; margin: auto;" />
 
 <img src="../../report/figures/viz-h3-dv2-1.png" style="display: block; margin: auto;" />
+
+### Robustness
+
+1.  Exclude centrists
+
+<img src="../../report/figures/exclude-centrists-1.png" style="display: block; margin: auto;" />

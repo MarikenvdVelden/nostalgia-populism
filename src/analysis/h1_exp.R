@@ -1,9 +1,3 @@
-d <- d |> mutate(nostalgia = factor(nostalgia),
-                 scapegoat = factor(scapegoat),
-                 ideology = factor(ideology),
-                 treatment = factor(treatment))
-d <- within(d, treatment <- relevel(treatment, ref = "No Nostalgia, No Scapegoat"))
-
 h1 <- lm(H18 ~ pop_vote*treatment +
            ideology, d)
 
@@ -13,7 +7,8 @@ pred_scapegoat <- interact_plot(model = h1, pred = pop_vote,
   labs(y = "Predicted Probabilities of Support for Scapegoat Messages",
        x = "Popolist Supporter \n (0 = No Supporter, 1 = Supporter)") +
   theme_ipsum() +
-  theme(legend.position = "none") +
+  theme(legend.position = "none",
+        axis.text=element_text(size=15)) +
   geom_curve(
     aes(x = .2, y = 8.78, xend = .15, yend = 8.35),
     arrow = arrow(length = unit(0.03, "npc")),

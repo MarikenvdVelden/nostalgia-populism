@@ -68,6 +68,7 @@ d <- d4 %>%
                                             `No nostalgia + scapegoat` = 1,
                                             `Nostalgia + scapegoat` = 1,
                                             .default = 0),
+         E2_2b = E2_2,
          E2_2 = recode(E2_2,
                        `consersative` = 1,
                        `very conservative` = 1,

@@ -56,14 +56,48 @@ dc <- cor(tmp[sapply(tmp,is.numeric)]) %>%
 
 ggplot(dc, aes(x = Var1, y = Var2, 
                fill = value, label = value)) +
-  geom_tile() +
-  geom_text() +
+  geom_tile( alpha = .6) +
+  geom_text(color = "white",fontface = "bold") +
   labs(x = " ",
        y = " ") +
   theme_ipsum() +
   scale_fill_gradient(low = fig_cols[6], high = fig_cols[1]) +
   theme(legend.position = "none",
-        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
+        axis.text=element_text(size=15))
+
+dc2 <- d1 |>  
+  mutate_at(vars(starts_with("H1b_")),
+            funs(recode(., 
+                        `1` = 1,
+                        `2` = 0,
+                        `3` = 0))) %>% 
+  mutate(ideo = E2,
+         rn = (H1b_4 + H1b_5 + H1b_7 + H1b_8 + H1b_10)/5,
+         pn = ( H1b_3 + H1b_6 + H1b_9)/3,
+         progn = (H1b_1 + H1b_2 + H1b_11)/3) %>% 
+  dplyr::select(`Ideology` = ideo, 
+                `Reluctant Nostalgia` = rn, 
+                `Playful Nostalgia` = pn,
+                `Progressive Nostalgia` = progn) %>% 
+  drop_na() 
+
+dc2 <- cor(dc2[sapply(dc2,is.numeric)]) %>% 
+  reshape2::melt() %>% 
+  #filter(Var1 == "Populist Attitudes" & Var2 != "Populist Attitudes") %>% 
+  mutate(value = round(value, 2)) 
+
+ggplot(dc2, aes(x = Var1, y = Var2, 
+               fill = value, label = value)) +
+  geom_tile( alpha = .6) +
+  geom_text(color = "white",fontface = "bold") +
+  labs(x = " ",
+       y = " ") +
+  theme_ipsum() +
+  scale_fill_gradient(low = fig_cols[6], high = fig_cols[1]) +
+  theme(legend.position = "none",
+        axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
+        axis.text=element_text(size=15))
 ```
 
 ## Types of Nostalgia
@@ -86,7 +120,7 @@ p2
 ```
 
 ## Figure 2
-```{r "nost-ideo", fig.width=12, fig.height=8}
+```{r "nost-ideo", fig.width=12, fig.height=12}
 p2b
 ```
 
@@ -117,29 +151,33 @@ d %>%
                colour = "gray55") +
   labs(x = "", y = "Support for Message") +
   theme_ipsum() +
+  theme(axis.text=element_text(size=15)) +
   coord_flip()
 ```
 
-### H1: Populist voters will be more supportive of messages that mention a scapegoat than non-populist voters.
+
+## H3: All voters will be more supportive of nostalgic messages than non-nostalgic messages
+
+```{r "testing-h3", fig.width=8, fig.height=8, eval=T}
+source(here("src/analysis/h3_exp.R"))
+```
+
+
+### Populist voters will be more supportive of messages that mention a scapegoat than non-populist voters.
 
 ```{r "testing-h1", fig.width=12, fig.height=6, eval=T}
 source(here("src/analysis/h1_exp.R"))
 ```
 
 
-## H2: Right-wing voters will be more supportive of nostalgic messages than left-wing voters
+##  Right-wing voters will be more supportive of nostalgic messages than left-wing voters
 
 ```{r "testing-h2", fig.width=12, fig.height=8, eval=T}
 source(here("src/analysis/h2_exp.R"))
 ```
 
-## H3: All voters will be more supportive of nostalgic messages than non-nostalgic messages
-
-```{r "testing-h3", fig.width=12, fig.height=6, eval=T}
-source(here("src/analysis/h3_exp.R"))
-```
-
-```{r "viz-h3", fig.width=8, fig.height=6, eval=T}
+### Figure 4 in paper
+```{r "viz-h3", fig.width=8, fig.height=10, eval=T}
 h1 %>% 
   add_case(h2) %>% 
   add_case(h3) %>% 
@@ -160,10 +198,11 @@ h1 %>%
   #facet_wrap(vars(hyp), ncol = 2, scales = "free") +
     facet_grid(hyp ~ y, scales = "free") +
   theme(legend.position = "bottom",
-        legend.title = element_blank())
+        legend.title = element_blank(),
+        axis.text=element_text(size=15))
 ```
 
-```{r "viz-h3-dv2", fig.width=15, fig.height=6, eval=T}
+```{r "viz-h3-dv2", fig.width=15, fig.height=10, eval=T}
 h3 %>% 
   filter(y != "Support for Message") %>% 
   mutate(hyp = factor(hyp,
@@ -180,8 +219,57 @@ h3 %>%
        y = "",
        caption = "Reference category: No Nostalgia, No Scapegoat") +
   geom_vline(xintercept = 0, linetype = "dashed", color = "gray85") +
-  facet_grid(hyp ~ y, scales = "free") +
+  facet_grid(. ~ y, scales = "free") +
   theme(legend.position = "bottom",
-        legend.title = element_blank()) +
+        legend.title = element_blank(),
+        axis.text=element_text(size=15)) +
   guides(color=guide_legend(nrow=1,byrow=TRUE))
+```
+
+
+### Robustness
+
+1. Exclude centrists
+
+```{r "exclude-centrists"}
+d_r <- d |> 
+  filter(E2_2b != "center")
+
+tidy(lm(H18 ~  treatment +
+                ideology, d_r)) %>% 
+  mutate(y = "Support for Message",
+         upper = (estimate + (std.error * 1.56)),
+         lower = (estimate - (std.error * 1.56))) |> 
+  mutate(var = "Experimental Treatment",
+         hyp = "Hypothesis 3",
+         term = recode(term,
+                         `treatmentNo Nostalgia, Scapegoat` = "No Nostalgia, Scapegoat",
+                         `treatmentNostalgia, Scapegoat` = "Nostalgia, Scapegoat",
+                         `treatmentNostalgia, No Scapegoat` = "Nostalgia, No Scapegoat"))|> 
+  filter(term %in% c("No Nostalgia, Scapegoat", 
+                     "Nostalgia, Scapegoat",
+                     "Nostalgia, No Scapegoat")) |> 
+  dplyr::select(factor = term,
+                var,
+                y,
+                estimate,
+                upper:lower, hyp) |> 
+  ggplot(aes(x = estimate, y = var,
+             xmin = lower, xmax = upper,
+             color = factor)) +
+  geom_point(position = position_dodge(width = 0.5)) + 
+  geom_errorbar(width = 0, position = position_dodge(width = 0.5)) +
+  theme_ipsum() +
+  labs(x = "Regression Estimates",
+       y = "",
+       title = "Robustness: Regression without centrists", 
+       caption = "Reference category: No Nostalgia, No Scapegoat") +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray85") +
+  #facet_wrap(vars(hyp), ncol = 2, scales = "free") +
+  #facet_grid(hyp ~ y, scales = "free") +
+  theme(legend.position = "bottom",
+        legend.title = element_blank(),
+        axis.text=element_text(size=15))
+
+
 ```

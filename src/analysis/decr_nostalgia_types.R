@@ -47,7 +47,8 @@ p1 <- ggbivariate(df1, outcome = "Reluctant Nostalgia",
   labs(y = "", x = "Levels of Nostalgia",
        title = "", subtitle = "") +
   theme(legend.title = element_blank(),
-        legend.position = "none")
+        legend.position = "none",
+        axis.text=element_text(size=15))
 
 p2 <- ggbivariate(df1, outcome = "Playful Nostalgia", 
                   explanatory = c("Gender", "Age","Education", 
@@ -61,7 +62,8 @@ p2 <- ggbivariate(df1, outcome = "Playful Nostalgia",
   labs(y = "", x = "Levels of Nostalgia",
        title = "", subtitle = "") +
   theme(legend.title = element_blank(),
-        legend.position = "none")
+        legend.position = "none",
+        axis.text=element_text(size=15))
 
 p3 <- ggbivariate(df1, outcome = "Progressive Nostalgia", 
                   explanatory = c("Gender", "Age","Education", 
@@ -75,7 +77,8 @@ p3 <- ggbivariate(df1, outcome = "Progressive Nostalgia",
   labs(y = "", x = "Levels of Nostalgia",
        title = "", subtitle = "") +
   theme(legend.title = element_blank(),
-        legend.position = "none")
+        legend.position = "none",
+        axis.text=element_text(size=15))
 
 df2 <- d1 %>% 
   add_column(coded_youth = df$youth,
@@ -139,4 +142,5 @@ p4 <- ggbivariate(df2,
   scale_color_manual(values = fig_cols) +
   theme(legend.title = element_blank(),
         legend.position = "top",
-        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+        axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
+        axis.text=element_text(size=15))

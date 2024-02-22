@@ -195,7 +195,8 @@ p1 <- d1 %>%
   theme(plot.title = element_text(hjust = 0.5),
         plot.subtitle = element_text(hjust = 0.5),
         legend.position="bottom",
-        legend.title = element_blank()) +
+        legend.title = element_blank(),
+        axis.text=element_text(size=15)) +
   guides(fill=guide_legend(nrow=1,byrow=TRUE))
 
 p2 <- tmp %>% 
@@ -211,7 +212,8 @@ p2 <- tmp %>%
   theme(plot.title = element_text(hjust = 0.5),
         plot.subtitle = element_text(hjust = 0.5),
         legend.position="bottom",
-        legend.title = element_blank()) +
+        legend.title = element_blank(),
+        axis.text=element_text(size=15)) +
   guides(fill=guide_legend(nrow=1,byrow=TRUE))
   
 tmp <- d1 %>% 
@@ -421,10 +423,20 @@ items2 <- dm %>%
                        `More immigrant and female politicians`  = "Reluctant Nostalgia",
                        `More young people going to college` = "Progressive Nostalgia"),
          type = "Survey Items \n Developments made life worse",
-         perc = ifelse(ideo == "Left-Wing Respondents", n/635, 0),
-         perc = ifelse(ideo == "Right-Wing Respondents", n/732, perc),
-         perc = ifelse(ideo == "Center Respondents", n/817, perc)) %>% 
+         perc =  n/1779) %>% 
   ungroup()
+
+open1 %>% 
+  add_case(open2) %>% 
+  add_case(items1) %>% 
+  add_case(items2) %>% 
+  mutate(ideo = factor(ideo,
+                       levels = c("Right-Wing Respondents",
+                                  "Center Respondents",
+                                  "Left-Wing Respondents",
+                                  "Full Sample"))) %>% 
+  filter(type == "Survey Items \n Developments made life worse") |> 
+  filter(var == "More economic inequality")
 
 p2b <- open1 %>% 
   add_case(open2) %>% 
@@ -446,7 +458,8 @@ p2b <- open1 %>%
   theme(plot.title = element_text(hjust = 0.5),
         plot.subtitle = element_text(hjust = 0.5),
         legend.position="bottom",
-        legend.title = element_blank()) +
+        legend.title = element_blank(),
+        axis.text=element_text(size=15)) +
   guides(fill=guide_legend(nrow=1,byrow=TRUE))
 
 tmp <- df |> 

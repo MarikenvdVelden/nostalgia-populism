@@ -119,7 +119,8 @@ p1 <- m1 %>% filter(id==0) %>%
   theme_ipsum() +
   facet_wrap(.~`Latent Variable`, scales = "free") +
   labs(y = " ", x = "PCA Loadings" ) +
-  theme(legend.position = "none")
+  theme(legend.position = "none",
+        axis.text=element_text(size=15))
 
 p2 <- m1 %>% filter(id==1,
               `Latent Variable` == "Populist Attitude" | Indicators == "Populist Attitude") %>% 
@@ -136,7 +137,8 @@ p2 <- m1 %>% filter(id==1,
   theme_ipsum() +
   facet_wrap(`type`~., scales = "free") +
   labs(y = " ", x = "PCA Loadings") +
-  theme(legend.position = "none")
+  theme(legend.position = "none",
+        axis.text=element_text(size=15))
 
 
 tmp <- d1 %>% 
@@ -159,5 +161,7 @@ p3 <- ggcorrmat(tmp,
                 type = "robust", # correlation method
                 cor.vars = c(everything()), # a range of variables can be selected
                 title = "Correlalogram for Variables under Study",
-                colors = c(fig_cols[2], "white", fig_cols[3])
+                colors = c(fig_cols[2], "white", fig_cols[3]),
+                ggtheme =theme_ipsum(),
+                axis.text=element_text(size=15)
 )

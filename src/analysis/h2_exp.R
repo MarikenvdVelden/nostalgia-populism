@@ -8,7 +8,8 @@ pred_nostalgia1 <- interact_plot(model = h2, pred = E2_2,
   labs(y = "Predicted Probabilities of Support for Message",
        x = "Ideology \n (0 = Progressive, 1 = Conservative)") +
   theme_ipsum() +
-  theme(legend.position = "none") +
+  theme(legend.position = "none",
+        axis.text=element_text(size=15)) +
   geom_curve(
     aes(x = .2, y = 8.92, xend = .15, yend = 8.5),
     arrow = arrow(length = unit(0.03, "npc")),

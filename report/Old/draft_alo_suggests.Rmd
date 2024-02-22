@@ -50,7 +50,7 @@ author:
   - name: Puck Guldemond
   - affiliation: Wageningen Universtiy & Research
 thanks: "* indicates corresoponding author; Replication files are available on the [corresponding author's Github account](https://github.com/MarikenvdVelden/nostalgia-populism); **Current version**: `r format(Sys.time(), '%B %d, %Y')`;"
-anonymous: TRUE
+anonymous: FALSE
 abstract: "_This paper explores nostalgia's persuasive role in political rhetoric, examining its influences across the ideological spectrum. While traditionally associated with right-wing populism, we argue that nostalgia also resonates with the left. To address conceptual overlaps between populism, nationalism, and nostalgia, we adopt a broader approach, encompassing sentimental longing for personal, in-group, or national pasts, regardless of what people are nostalgic for. This approach enables a fuller understanding of nostalgia's impact on campaign rhetoric. We find: a) conceptual overlap between populism and a subtype of nostalgia grieving for a lost national identity (reluctant nostalgia); b) voters across ideological spectrums have nostalgic attitudes using this broader approach; and c) while individuals are persuaded by nostalgic messages from those similar to them, such messages decrease support for in-party messages. This paper, thereby, emphasizes the necessity of comprehensively grasping nostalgia to fully comprehend its impact on political campaigning._"
 keywords: "Nostalgia, Political Parties' Rhetoric, Campaign Messages, Measurement Models, Qualitiative Narrative Analysis, Experiment"
 geometry: margin=1in
@@ -93,7 +93,7 @@ source(here::here("src/lib/functions.R"))
 
 Populists seemingly make hay with slogans like "*Make America great again!*" (Donald Trump), "*Take back control!*" (UKIP), or "*Turn back the clock to times before the country was being stolen from them*" (US Tea Party). 
 What these slogans have in common is that a) they all critique the current way of life and yearn for the times before society has undergone said changes; and b) they are made by right-wing populist parties or party leaders. 
-At the same time, left-wing leaders, like Jean-Luc Mélenchon (*La France Insoumise*), also reminisce about the hope that lies in the past [@buffery2012].
+At the same time, left-wing leaders, like Jean-Luc Mélenchon (*La France Insoumise*) [@buffery2012], also reminisce about the hope that lies in the past.
 Looking at rhetoric used by US presidential candidates during election campaigns, Democrats did not use any less nostalgic rhetoric than Conservatives did [@bonikowski2022reclaiming]. 
 For example, democrats use pre-globalization nostalgia [@ballard2024trade]. 
 Moreover, in the EU referendum campaign, the Remain side argued that staying in the EU reflected a continuity of British history [@gaston2018home].
@@ -123,7 +123,7 @@ The most used scale, collective nostalgia, however, does only reflext the more h
 Additionally, the psychological characteristics of nostalgia -- being that nostalgia gives psychological comfort [@sedikides2018finding; @routledge2011past], intrinsically motivates people [@may2017belonging; @van2019nostalgia; @sedikides2018finding], and reduces inter-group prejudices [@lammers2018past; @wohl2020longing] -- seem ideally suited for a campaign rhetoric that bolsters message support. 
 We, therefore, put forward that *nostalgia is a persuasive rhetorical style political actors across the ideological spectrum have in their toolkit to successfully persuade voters*.
 
-To substantiate our argument, we explore different conceptions of the past that voters yearn for using a broader conceptualization of nostalgia -- i.e. one tested and validated in the fields of sociology and marketing studies [@pickering2006modalities; @may2017belonging; @hartmann2019nostalgia].^[While we acknowledge that this broader conception of nostalgia is correlated with right-wing ideology -- it is, see our [Online Compendium](https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md)-- or argument is that it encompasses more types of nostalgia, i.e. also the types of bitter sweet memories of people from the left [@stefaniak2021different].] 
+To substantiate our argument, we explore different conceptions of the past that voters yearn for using a broader conceptualization of nostalgia -- i.e. one tested and validated in the fields of sociology and marketing studies [@pickering2006modalities; @may2017belonging; @hartmann2019nostalgia].^[While we acknowledge that this broader conception of nostalgia is correlated with right-wing ideology -- it is, see our [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism)-- or argument is that it encompasses more types of nostalgia, i.e. also the types of bitter sweet memories of people from the left [@stefaniak2021different].] 
 Specifically, we look at three dimensions:
 Reluctant, progressive, and playful nostalgia. 
 Reluctant nostalgia encapsulates a yearning for a past era that is often associated with a specific national identity.
@@ -143,23 +143,16 @@ First, using PCA, we show that there is considerable overlap between reluctant n
 We thereby provide evidence for a wider conceptualization of nostalgia than thus-far used in studies of political science and political communication. 
 Second, using qualitative content analysis, we demonstrate that indeed voters of populist parties score higher on reluctant nostalgia, but across the ideological spectrum people hold especially playful and progressive nostalgic feelings.
 This means that previous work that linked populism to nostalgia seems to take only into account a specific type of nostalgia, while other types of nostalgia might be more relevant for left-wing politics.
-Third, in a preregistered vignette experiment,^[Our [online compendium](https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md) combines the data and the preregistration.] we show that overall respondents like nostalgic messages, but not more so than non-nostalgic messages.
+Third, in a preregistered vignette experiment,^[Our online compendium combines the data and the preregistration: https://github.com/MarikenvdVelden/nostalgia-populism] we show that overall respondents like nostalgic messages, but not more so than non-nostalgic messages.
 While they do not think this is the right message for them, respondents do think that a nostalgic message is the best for people like them.
 This aligns with what is known as the third person effect in communication science and psychology, meaning that people tend to perceive that mediated messages have a greater effect on others than on themselves, based on personal biases [@davison1983third].
 Exploring heterogeneous treatment effects, we show that nostalgic messages actually reduce support for messages coming from in-party campaigns, and that reduction is even stronger for conservative respondents. 
 
-This study makes several important theoretical and empirical contributions. 
-First, in the field of the political communication, we theorise and find evidence that the central role nostalgia plays in political communication goes way beyond the concept of collective nostalgia [@smeekes2015longing; @sedikides2019sociality; @wohl2020longing].
-The nostalgic desire to "return to community" is present across the ideological spectrum, although often not only reluctant but also progressive and playful. 
-All in all, nostalgia evokes a sense of belonging, which is pivotal for people to carry out their democratic citizenship [@blajer2023conceptualizing]. 
-Second, this paper contributes to research on rhetorical persuasiveness.
-Our empirical findings provide a nuanced understanding on the extent to which nostalgia can be effective to engage voters.
-We show that even if thinking nostalgia is persuasive is a commonplace across voters from different ideologies, it does not increase the liking of in-party political messages.
-We posit that the findings of our research hold key implications for contemporary democratic societies and the well-being of individuals. 
-Based on the shared misperception that nostalgia is an effective tool for political persuasion, political actors might be exacerbating social divisions and individuals' disatisfaction. 
-On one hand, nostalgia, particularly of the reluctant variety, has the potential to heighten inter-group tensions [@smeekes2015longing]. 
-This effect can polarize communities, as it often romanticizes a past that excludes certain groups, thereby exacerbating divisions within society. 
-On the other hand, our results suggest that nostalgia can adversely impact individual well-being and the quality of social interactions [@sedikides2008nostalgia; @juhl2010fighting]. 
+This study makes several important theoretical and empirical contributions. First, in the field of the political communication, we theorise and find evidence that the central role nostalgia plays in political communication goes way beyond the concept of collective nostalgia [@smeekes2015longing; @sedikides2019sociality; @wohl2020longing].
+The nostalgic desire to "return to community" is present across the ideological spectrum, although often not only reluctant but also progressive and playful. All in all, nostalgia evokes a sense of belonging, which is pivotal for people to carry out their democratic citizenship [@blajer2023conceptualizing]. 
+Second, this paper contributes to research on rhetorical persuasiveness. Our empirical findings provide a nuanced understanding on the extent to which nostalgia can be effective to engage voters. We show that even if thinking nostalgia is persuasive is a commonplace across voters from different ideologies, it does not increase the liking of in-party political messages.
+
+We posit that the findings of our research hold key implications for contemporary democratic societies and the well-being of individuals. Based on the shared misperception that nostalgia is an effective tool for political persuasion, political actors might be exacerbating social divisions and individuals' disatisfaction. On one hand, nostalgia, particularly of the reluctant variety, has the potential to heighten inter-group tensions (Smeekes, 2015). This effect can polarize communities, as it often romanticizes a past that excludes certain groups, thereby exacerbating divisions within society. On the other hand, our results suggest that nostalgia can adversely impact individual well-being and the quality of social interactions  (Sedikides et al, 2008; Juhl et al, 2010). 
 
 # Does Longing for the Past Mobilize? And for Whom?
 
@@ -202,7 +195,7 @@ Notably, these memories may not always be accurate reflections of past events bu
 Disruptive societal changes, like significant migration flows, typically elicit nostalgia.
 Although a substantial portion of research in political communication and psychology emphasizes nativist in-group and out-group dynamics [e.g. @smeekes2021longing; @elcci2022politics], broader research in social psychology and sociology indicates a more extensive application of in-group threats, such as the decline of the working class [@heath2022evolution]. 
 Current findings suggest nostalgia is less about political inclination and more associated with individual personality traits [@stefaniak2022us].
-This insight givesx rise to our next expectation:
+This insight gives rise to our next expectation:
 
 >**H2**: *Citizens, irrespective of their ideological leanings, exhibit nostalgic attitudes.*
 
@@ -242,9 +235,9 @@ During the first wave, participants were asked about their political preferences
 In the fourth wave, we included an experiment in order to disentangle nostalgic messages from ideological ones. 
 In the first wave, `2,185` participants completed the survey, in the fourth wave `1,560` participants completed the survey. 
 These waves where chosen due to availability in the broader election project.
-We have used the recommendation of Gerber and Green (2011) to impute missing values with the mean value per wave, and indicate whether a variable has more than ten percent missing values.^[Our analytical code is available on our Online Compendium: https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md] 
+We have used the recommendation of Gerber and Green (2011) to impute missing values with the mean value per wave, and indicate whether a variable has more than ten percent missing values.^[Our analytical code is available on our Online Compendium: https://github.com/MarikenvdVelden/nostalgia-populism] 
 While there are more sophisticated methods for imputation, e.g. machine learning techniques [@thomas2021systematic], the difference in results do not outweigh the efforts.
-We report the results with imputed missing values, but our [Online Compendium](https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md) also presents the analyses without imputed values, and these results are substantively similar.
+We report the results with imputed missing values, but our [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism) also presents the analyses without imputed values, and these results are substantively similar.
 
 
 ## Study 1 & 2: Observational Data
@@ -367,7 +360,7 @@ Based on ideological self-selection, using a five-point Likert scale to classify
 For each ideological group, we created messages based on the narratives coming from the open ended questions as well as based on the reviewed literature in sociology and marketing. 
 Respondents that categorize themselves as center, conservative or very conservative were shown the right-wing conservative treatments.^[As a robustness check, we run the analyses with and without the people who classify themselves as centrists, and this does not substantively affect the results.]
 Respondents that categorize themselves as progressive, or very progressive were shown the left-wing progressive treatments. 
-Messages can either be nostalgic or not, as well as consist of a scapegoat or not (i.e. a `2*2` design) -- creating four experimental groups, see our [Online Compendium](https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md).
+Messages can either be nostalgic or not, as well as consist of a scapegoat or not (i.e. a `2*2` design) -- creating four experimental groups, see our [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism).
 We randomized respondents into seeing one of four different potential campaign messages (see Figure \ref{fig:procedure}), telling respondents that a party close to their position is testing campaigning material for the next Dutch elections. 
 An example of the treatment text for a left-wing voter including nostalgia and a scapegoat reads as follows: 
 _Looking back, we remember a time when solidarity, workers rights, and respect for the environment were paramount. People lived a slow and peaceful life in harmony with nature, valuing community over individualism. Today, we see a world plagued by pollution, polarization, and stress, caused in large part by large corporations, contamination lobbyists and neo-liberal policy makers. It's time to hold them accountable again for their actions and reclaim those values of solidarity, respect, and peace that made our world a better place. Let's create a world where workers' rights are protected again, the environment is re-cherished, and the well-being of all people is prioritized again over the interests of a select few._
@@ -379,16 +372,16 @@ include_graphics(here("report/figures/Experiment_nostalgia.jpg"))
 ***Dependent Variables.*** 
 To test the support for nostalgic messages in H3, we first asked respondents on an eleven-point scale, where `0` is totally disagree and `10` is totally agree, the extent to which they agreed with the statement they just read (i.e. the experimental treatment). 
 As a follow up, we asked respondents to select the campaign message their in-party should pick because a) it fits you best; b) it fits the general Dutch voters best; and c) it fits left-wing/ right-wing voters best. 
-Respondents could select any of the four texts we created for the experiment (see our [Online Compendium](https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md)).
+Respondents could select any of the four texts we created for the experiment (see our [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism)).
 
-***Control Variables.*** Based on a balance test (see our [Online Compendium](https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md) for details), we included unbalanced demographic co-variates as well as the ideological tone of the experimental message, and whether it was a nostalgic and/or scapegoat message into our analysis. 
+***Control Variables.*** Based on a balance test (see our [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism) for details), we included unbalanced demographic co-variates as well as the ideological tone of the experimental message, and whether it was a nostalgic and/or scapegoat message into our analysis. 
 
 ## Methods of Estimation
 
 We used PCA and a Pearson's Rho correlation to test H1. 
 We used descriptive statistics and a t-test for H2.
 For H3, we employed simple OLS regressions. 
-All analytical material is published in our [Online Compendium](https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md).
+All analytical material is published in our [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism).
 
 # Message Support and Nostalgic Rhetoric
 
@@ -399,7 +392,7 @@ Finally, leveraging an experimental `2*2` design, we cue nostalgic values as wel
 ## Do Populism and Nostalgia Measure the Same?
 
 To measure the empirical overlap between *Populist Attitudes* and *Nostalgic Attitudes* (H1), we performed a Principal Component Analysis (PCA), using all nine populist and eleven nostalgic survey items.^[Before conducting the PCA, we did calculated a correlation table, see our Online Compendium, showing that the two items on populist items that encompass the core dimensions of *sovereignty of the people* and an *anti-elitist* and *anti-pluralist*, is negatively correlated with a nostalgic factor that would indicate a high degree of progressiveness (as the responses on these survey items illustrate that respondents view higher shares of ethnic minorities as en improvement etc.).] 
-Before running the measurement model of all nostalgic and populist measures, the nostalgia items were examined more closely in a separate analysis (see [Online Compendium](https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md)).^[This is done as these measures have thus far not been used in much of political science or political communication literature. A confimatory factor analysis of the nostalgic items overall offers the expected results: The Nostalgic items that refer to media and entertainment load together on one factor, while the items that would suggest either a more reluctant/nationalistic or progressive attitude (depending on the value of the response) are split into two separate factors which significantly and positively correlate with each other.]
+Before running the measurement model of all nostalgic and populist measures, the nostalgia items were examined more closely in a separate analysis (see [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism)).^[This is done as these measures have thus far not been used in much of political science or political communication literature. A confimatory factor analysis of the nostalgic items overall offers the expected results: The Nostalgic items that refer to media and entertainment load together on one factor, while the items that would suggest either a more reluctant/nationalistic or progressive attitude (depending on the value of the response) are split into two separate factors which significantly and positively correlate with each other.]
 
 The PCA loadings (covariance) demonstrate that for each latent construct two indicators are contributing most to the measure. 
 For Populist Attitudes, it is the anti-pluralist item *"what is called 'compromising' in politics is really just betraying your principles"* and the anti-establisment item *"The will of the common people should be the highest principle in politics"*. 
@@ -497,7 +490,7 @@ The effect size of the different treatment groups differ.
 The smallest effect size comes from the nostalgic message without a scapegoat, while statistically different from the "plain" message, with a coefficient of `-0.3`.
 The biggest effect size can be seen with the nostalgic message with a scapegoat, with a coefficient of `-1.1`. 
 As a robustness check, we have conducted the same analysis without the centrist, as they where forced into the conservative treatment.
-The results, reported in the [Online Compendium](https://anonymous.4open.science/r/nostalgia-populism-6B2D/README.md), are not affected by this choice.
+The results, reported in the [Online Compendium](https://github.com/MarikenvdVelden/nostalgia-populism), are not affected by this choice.
 
 Looking deeper at potential ideological differences in support for nostalgic messages, the lower-panel of Figure \ref{fig:results-h3} shows that for right-wing, conservative, and populist voters, the nostalgic message without a scapegoat is liked to the same extend as the plain message -- i.e. no statistical significant difference was found. 
 For left-wing, progressive, and non-populist voters, the effects are similar to the main effect presented in the upper-panel of the Figure.
@@ -549,10 +542,9 @@ In a rapidly changing society everyone can feel comforted by a nostalgic yearnin
 At the same time, @szabo2022sharing shows that nostalgic messages may not be as efficient in terms of user engagement and response as previously thought
 This insight into the third-person effect underscores the importance of considering individual differences and psychological biases in the design of political campaigns.
 
-An important implication of our research is the revelation that the widespread adoption of nostalgic narratives by populist actors could stem from a misperception of these narratives as more effective than other rhetorical strategies. 
-This insight is crucial, given that evidence links reluctant nostalgia not only to increased resentment between social groups [@smeekes2015longing] but also to adverse effects on personal well-being [@sedikides2008nostalgia], and an amplification of existential threats [@juhl2010fighting].
-Building on these findings, we invite future researchers to examine the extent to which not only populist actors but also mainstream political parties and media outlets employ nostalgia, including its playful and progressive variants, to engage and attract voters.
-The differential impacts of these nostalgia types on societal cohesion and individual well-being merit closer investigation. 
+An important implication of this research is the revelation that the widespread adoption of nostalgic narratives by populist actors could stem from a misperception of these narratives as more effective than other rhetorical strategies. This insight is crucial, given that evidence links reluctant nostalgia not only to increased resentment between social groups (Smeekes, 2015) but also to adverse effects on personal well-being (Sedikides et al, 2008) and an amplification of existential threats (Juhl et al, 2010).
+
+Building on these findings, we invite future researchers to examine the extent to which not only populist actors but also mainstream political parties and media outlets employ nostalgia, including its playful and progressive variants, to engage and attract voters. The differential impacts of these nostalgia types on societal cohesion and individual well-being merit closer investigation. 
 
 \newpage
 \singlespacing
